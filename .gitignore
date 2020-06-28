@@ -1,2 +1,6 @@
 Data/nac2017.csv
-Data/CleanData/
+Data/CleanData/Unified/
+Data/CleanData/CleanDB_FULL.csv
+Data/newData/Original/nac2017.zip
+Data/newData/nac/
+Data/CleanData/CleanDB.csv
