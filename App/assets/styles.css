@@ -1,0 +1,31 @@
+.t4-app {
+    display: flex;
+    flex-direction: column;
+    background-color:#ADD8E6;
+    font-family:"Lucida Console", Courier, monospace;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 40;
+}
+
+.slider {
+    color: white;
+}
+ 
+.map-container {
+    width: 100%;
+    background-color: #2F4F4F;
+}
+
+.main-figure {
+    margin-left: 18rem;
+    margin-right: 2rem;
+    padding: 2rem 1rem;
+    width: 50%;
+    display: inline-block;
+    background-color:#2F4F4F;
+}
+
+
