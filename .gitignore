@@ -4,3 +4,5 @@ Data/CleanData/CleanDB_FULL.csv
 Data/newData/Original/nac2017.zip
 Data/newData/nac/
 Data/CleanData/CleanDB.csv
+Notebooks/.ipynb_checkpoints/
+Data/CleanData/CleanDB_FULL.zip
