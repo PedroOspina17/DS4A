@@ -26,3 +26,22 @@ geo = gpd.read_file('../Data/GeoData/Municip.json')
 df['mpio_name'] = df['id_birth'].copy().replace(geo['MPIO_CCNCT'].to_list(),geo['MPIO_CNMBR'].to_list())
 
 df.to_csv('year_outcome_count.csv',index=False) #Save for later use 
+
+
+######################### Load data
+year_outcome_count_df = pd.read_csv('./data/year_outcome_count.csv',dtype={'year':int,'id_birth':str,'mpio_name':str,
+                                                       'resultado_emb':'object','count':int}) 
+
+
+year_outcome_count_df['dpto'] = year_outcome_count_df['id_birth'].apply(lambda x: x[:2])
+year_outcome_count_df_ = year_outcome_count_df[year_outcome_count_df['resultado_emb'] == 'NACIDO_VIVO']
+
+with open('../Data/GeoData/Municip.json', 'r') as f:
+    munic = json.loads(f.read())
+
+with open('../Data/GeoData/Dpto.json', 'r') as f:
+    dpto = json.loads(f.read())
+
+dptoCodeNames = pd.read_csv('../Data/GeoData/DptoCode_Names.csv')
+
+########################## End loading data
