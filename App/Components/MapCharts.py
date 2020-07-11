@@ -18,7 +18,7 @@ fig = px.choropleth_mapbox(df_slice,
            mapbox_style="carto-positron",
            featureidkey = 'properties.DPTO_CCDGO',
            color_continuous_scale="PuRd",
-           center={'lat':4,'lon':-75},
+           center={'lat':4.3,'lon':-73},
            hover_name='DPNOM',
            opacity=0.7)
 

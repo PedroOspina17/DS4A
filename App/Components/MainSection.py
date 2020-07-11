@@ -20,21 +20,19 @@ mainMap_card = dbc.Card(
         dcc.Graph(figure=mainMap, id='mainMap')
     ],
     className="ml-2",
-    style={"width": "99%"},
+    style={"width": "35rem",'height':'auto'},
 )
 
-
-secundary_card = dbc.Card(
+secundary_card2 = dbc.Card(
     [
-        dbc.CardBody(html.P("Pregnancy outcomes by department", className="card-text")),
-        dbc.CardImg(src="/assets/images/map2.png", bottom=True),
+        dbc.CardBody(html.P("Stats", className="card-text")),
+        dbc.CardImg(src="/assets/images/Stats2.png"),
+        dbc.CardImg(src="/assets/images/Stats3.png"),
     ],
     className="mt-4 ml-2",
-    style={"width": "20rem"},
+    style={"width": "20rem",'height':'auto'},
 )
 
+rightCol = dbc.Col([secundary_card2],width='auto')
+main = dbc.Row([mainMap_card,rightCol],className='mt-5')
 
-
-bottom_card = dbc.Row([dbc.Col(secundary_card, width="auto"), dbc.Col(secundary_card, width="auto"), dbc.Col(secundary_card, width="auto")])
-
-main = dbc.Col([mainMap_card,bottom_card], width="auto", className="mt-5")

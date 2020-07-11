@@ -24,13 +24,14 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING 
 footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
 
 app.layout =  html.Div([
-    dbc.Row(
-            [
-                SidebarSection.sidebar,
-                MainSection.main,
-                footer
-            ]
-        )
+    dbc.Col([
+        dbc.Row(
+                [
+                    SidebarSection.sidebar,
+                    MainSection.main,
+                ]
+            ), 
+       footer])
     
 ],className="h-100")
 
@@ -78,7 +79,7 @@ def mapInteraction(year,PlotVariable,click,button,figure):
                        mapbox_style="carto-positron", 
                        featureidkey = 'properties.MPIO_CCNCT',
                        color_continuous_scale="PuRd",
-                       center={'lat':4,'lon':-75},
+                       center={'lat':4.3,'lon':-73},
                        hover_name='mpio_name',
                        opacity=0.5)
             fig.update_layout(margin={'l':0,'r':0,'t':10,'b':5},
