@@ -9,113 +9,26 @@ import plotly.express as px
 import pandas as pd
 import json
 import os
+from dash.exceptions import PreventUpdate
+from Components import LoadData as d
+from Components import MainSection,SidebarSection 
 
 
-
-
-
-
+print("StartApp")
 
 #Create the app
-# app = dash.Dash(__name__)
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING BOOTSTRAP'S CSS LIBRARY
 
-########################################### Side bar #####################################################
-
-# ToDo: Separate in different files !!
-title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
 
 
-filters = dbc.Card(
-    [
-        dbc.FormGroup(
-            [
-                dbc.Label("X variable"),
-                dcc.Dropdown(
-                    id="x-variable",
-                    options=[
-                        {"label": "option {}".format(col), "value": col} for col in range(10)
-                    ],
-                    value=1,
-                ),
-            ]
-        ),
-        dbc.FormGroup(
-            [
-                dbc.Label("Y variable"),
-                dcc.Dropdown(
-                    id="y-variable",
-                    options=[
-                        {"label": "option {}".format(col), "value": col} for col in range(10)
-                    ],
-                    value=1,
-                ),
-            ]
-        ),
-        dbc.FormGroup(
-            [
-                dbc.Label("temp filter"),
-                dbc.Input(id="cluster-count", type="number", value=3),
-            ]
-        ),
-    ],
-    body=True,
-)
-
-upperContent = dbc.Row(dbc.Col(
-    dbc.Container([filters,html.Hr()],className="h-50")
-    , width="auto"))
-
-
-
-menu = dbc.Row(dbc.Col(
-    dbc.ListGroup([
-        dbc.ListGroupItem("Active item", active=True),
-        dbc.ListGroupItem("Item 2"),
-        dbc.ListGroupItem("Item 3"),
-    ]), width="auto")
-,className="h-50 ml-4")
-
-
-sidebar = dbc.Col([title,upperContent,menu], width=2)
-
-
-
-
-########################################### Main section #####################################################
-
-main_card = dbc.Card(
-    [
-        dbc.CardBody(html.P("Pregnancy outcomes history", className="card-text")),
-        dbc.CardImg(src="/assets/images/mainGraph.png", bottom=True),
-    ],
-    className="ml-2",
-    style={"width": "91%"},
-)
-
-bottom_card = dbc.Card(
-    [
-        dbc.CardBody(html.P("Pregnancy outcomes by department", className="card-text")),
-        dbc.CardImg(src="/assets/images/map2.png", bottom=True),
-    ],
-    className="mt-4 ml-2",
-    style={"width": "20rem"},
-)
-
-
-
-cards = dbc.Row([dbc.Col(bottom_card, width="auto"), dbc.Col(bottom_card, width="auto"), dbc.Col(bottom_card, width="auto")])
-
-main = dbc.Col([main_card,cards], width="auto", className="mt-5")
-
-########################################### Footer #####################################################
+####################################################### Layout ###################################################
 footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
-########################################### App layout #####################################################
+
 app.layout =  html.Div([
     dbc.Row(
             [
-                sidebar,
-                main,
+                SidebarSection.sidebar,
+                MainSection.main,
                 footer
             ]
         )
@@ -124,70 +37,80 @@ app.layout =  html.Div([
 
 
 
-# html.Div([
-#                         html.Div([
-#                             html.Div(html.H1("Number of births per municipality", id='title'),className='main-title'),
-#                             html.Div(id='dd-output-container'),
-
-#                             html.Div([html.Div([dcc.Dropdown(id='selectDpto',options=dropDownOptions, value='05'),
-#                                                 dcc.Graph(figure=mapFig,id='main-figure'),
-#                                                 html.Div(dcc.Slider(min=2008,max=2018,step=1,id='fig-slider',value=2018,
-#                                                     marks = sliderMarks),
-#                                                 className='slider')],
-#                                             className='main-figure'),
-
-#                                       html.Div([dcc.Graph(figure=mapFig,id='dummy')],className='main-figure')
-#                             ],className='map-container'),
-
-#                     ],className="t4-app")
-#             ])
+###################################################### Callbacks ###################################################
 
 
-######################## Callbacks
+currDptoData = 0     #Variable to hold data for only one dpto so query is faster when changing years. 
+dptoMap = True       #Tell if we're currently at a full Colombia map
 
-#Main map callback
 @app.callback(
-    Output('main-map','figure'),
-    [Input('fig-slider','value'),Input('selectDpto','value')],
-    [State('main-map','figure')])
-def slider_interaction(year,dpto,figure):
-    dpto = str(dpto).zfill(2)
-
-
+    Output('mainMap','figure'),
+    [Input('fig-slider','value'),Input('whichData','value'),Input('mainMap','clickData'),Input('backButt','n_clicks')],
+    [State('mainMap','figure')])
+def slider_interaction(year,PlotVariable,click,button,figure):
+    global currDptoData,dptoMap
+    print("call1")
+#     print(MainSection.mainMap)
     #Tell which input was triggered
     ctx = dash.callback_context
-    #If dpto was changed, redraw for this dpto.
-    if ctx.triggered[0]['prop_id'] == 'selectDpto.value':
-        newData = perCapMunic[(perCapMunic['cod_dpto'] == dpto) & (perCapMunic['year'] == year)]
+    print(ctx.triggered)
+    #If dpto was changed  redraw for this dpto.
+    if ctx.triggered[0]['prop_id'] == 'mainMap.clickData':
+        print("call4")
+        if dptoMap:  #and if a dpto (not a munic) was selected
 
-        fig = px.choropleth_mapbox(newData,
-                   locations='id_birth',
-                   color='count',
-                   geojson=Munic,
-                   zoom=4,
-                   mapbox_style="carto-positron", 
-                   featureidkey = 'properties.MPIO_CCNCT',
-                   color_continuous_scale="PuRd",
-                   center={'lat':4,'lon':-75},
-                   #hover_name='mpio_name',
-                   opacity=0.5)
-        fig.update_layout(margin={'l':0,'r':0,'t':10,'b':5},
-                             paper_bgcolor="#2F4F4F",
-                             font={'family':"Courier New, monospace",
-                                   'size':18,
-                                   'color':"#F0FFFF"})
-        return fig
+            #Define new dpto 
+            dpto = click['points'][0]['location']
+            dptoMap = False # This is now a municipal map (not full Colombia)
+
+            currDptoData = d.perCapMunic[d.perCapMunic['cod_dpto'] == dpto] 
+            newData = currDptoData[(d.perCapMunic['year'] == year)]
+    
+            fig = px.choropleth_mapbox(newData,
+                       locations='id_birth',
+                       color=PlotVariable,
+                       geojson=d.Munic,
+                       zoom=4,
+                       mapbox_style="carto-positron", 
+                       featureidkey = 'properties.MPIO_CCNCT',
+                       color_continuous_scale="PuRd",
+                       center={'lat':4,'lon':-75},
+                       hover_name='mpio_name',
+                       opacity=0.5)
+            fig.update_layout(margin={'l':0,'r':0,'t':10,'b':5},
+                                 paper_bgcolor="white",
+                                 font={'family':"Courier New, monospace",
+                                       'size':18,
+                                       'color':"#F0FFFF"})
+            return fig
+
+        #If click on municip, do nothing
+        else:
+            raise PreventUpdate
         
-    elif figure['data']: #Else (if only year was changed), change only data
-        if dpto == None: #If current map is departamental
-            newData = perCapDptos[perCapDptos['year'] == year]
-        else:  #If map is a municipal one:
-            newData = perCapMunic[(perCapMunic['cod_dpto'] == dpto) & (perCapMunic['year'] == year)]
-            
-        figure['data'][0]['z'] = newData['count']
-        return figure
+    #If year or data to plot (dropDown) are changed, then modify data (not map)
+    elif ctx.triggered[0]['prop_id'] == 'fig-slider.value' or ctx.triggered[0]['prop_id'] == 'whichData.value':
+        print("call3")
+        if figure['data']: #(if only year was changed), change only data
+            if dptoMap: #If current map is departamental (full Colombia)
+                newData = d.perCapDptos[d.perCapDptos['year'] == year]
+            else:  #If map is a municipal one:
+                newData = currDptoData[currDptoData['year'] == year]   #Use already sliced data for this dpto.
+                
+            figure['data'][0]['z'] = newData[PlotVariable]
+            return figure
 
-###################### End callbacks
+    #If back button is pressed, then reset the map
+    elif ctx.triggered[0]['prop_id'] == 'backButt.n_clicks':
+        print("call2")
+        dptoMap = True   #We're back to full Colombia
+        return MainSection.mainMap
+
+    else:
+        return figure
+        
+    
+###################################################### Run the server #########################################################
 
 
 #Initiate the server where the app will work
