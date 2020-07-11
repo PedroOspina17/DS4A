@@ -8,18 +8,20 @@ import plotly.express as px
 import pandas as pd
 import json
 import os
+from Components import MapCharts
 
+print("MainSec")
 
-mainMap = dbc.CardImg(src="/assets/images/mainGraph.png", bottom=True)
+mainMap = MapCharts.fig
 
 
 mainMap_card = dbc.Card(
     [
-        dbc.CardBody(html.P("Pregnancy outcomes history", className="card-text")),
-        mainMap,
+        dbc.CardBody(html.P("Pregnancy outcomes by department", className="card-text")),
+        dcc.Graph(figure=mainMap, id='mainMap')
     ],
     className="ml-2",
-    style={"width": "91%"},
+    style={"width": "99%"},
 )
 
 
