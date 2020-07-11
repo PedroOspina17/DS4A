@@ -69,7 +69,7 @@ def mapInteraction(year,PlotVariable,click,button,figure):
             dptoMap = False # This is now a municipal map (not full Colombia)
 
             currDptoData = d.perCapMunic[d.perCapMunic['cod_dpto'] == dpto] 
-            newData = currDptoData[(d.perCapMunic['year'] == year)]
+            newData = currDptoData[currDptoData['year'] == year]
     
             fig = px.choropleth_mapbox(newData,
                        locations='id_birth',
