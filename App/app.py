@@ -37,27 +37,32 @@ app.layout =  html.Div([
 
 
 ###################################################### Callbacks ###################################################
-
+## Update main map and map title
+titleNamesDict = {value:label for value,label in SidebarSection.opts.items()}
 
 currDptoData = 0     #Variable to hold data for only one dpto so query is faster when changing years. 
 dptoMap = True       #Tell if we're currently at a full Colombia map
+region = 'Colombia'  #Variable to hold region name (be it Colombia or a specific dpto)
 
 @app.callback(
-    Output('mainMap','figure'),
+    [Output('mainMap','figure'),Output('mapFigTitle','children')],
     [Input('fig-slider','value'),Input('whichData','value'),Input('mainMap','clickData'),Input('backButt','n_clicks')],
     [State('mainMap','figure')])
-def slider_interaction(year,PlotVariable,click,button,figure):
-    global currDptoData,dptoMap
-    print("call1")
+def mapInteraction(year,PlotVariable,click,button,figure):
+    global currDptoData,dptoMap,region
 
     #Tell which input was triggered
     ctx = dash.callback_context
 
     #If dpto was changed  redraw for this dpto.
     if ctx.triggered[0]['prop_id'] == 'mainMap.clickData':
-        print("call4")
         if dptoMap:  #and if a dpto (not a munic) was selected
 
+            #Define region to update title
+            region = click['points'][0]['hovertext']
+            Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
+
+            
             #Define new dpto 
             dpto = click['points'][0]['location']
             dptoMap = False # This is now a municipal map (not full Colombia)
@@ -82,7 +87,7 @@ def slider_interaction(year,PlotVariable,click,button,figure):
                                  font={'family':"Courier New, monospace",
                                        'size':18,
                                        'color':"#212529"})
-            return fig
+            return (fig,Title)
 
         #If click on municip, do nothing
         else:
@@ -90,7 +95,6 @@ def slider_interaction(year,PlotVariable,click,button,figure):
         
     #If year or data to plot (dropDown) are changed, then modify data (not map)
     elif ctx.triggered[0]['prop_id'] == 'fig-slider.value' or ctx.triggered[0]['prop_id'] == 'whichData.value':
-        print("call3")
         if figure['data']: #(if only year was changed), change only data
             if dptoMap: #If current map is departamental (full Colombia)
                 newData = d.perCapDptos[d.perCapDptos['year'] == year]
@@ -98,18 +102,26 @@ def slider_interaction(year,PlotVariable,click,button,figure):
                 newData = currDptoData[currDptoData['year'] == year]   #Use already sliced data for this dpto.
                 
             figure['data'][0]['z'] = newData[PlotVariable]
-            return figure
+
+
+            Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
+            return (figure,Title)
 
     #If back button is pressed, then reset the map
     elif ctx.triggered[0]['prop_id'] == 'backButt.n_clicks':
-        print("call2")
         dptoMap = True   #We're back to full Colombia
-        return MainSection.mainMap
+
+        region = 'Colombia'
+        Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
+
+        return (MainSection.mainMap,Title)
 
     else:
-        return figure
+        Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
+        return (figure,Title)
         
     
+
 ###################################################### Run the server #########################################################
 
 

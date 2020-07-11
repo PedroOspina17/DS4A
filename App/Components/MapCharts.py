@@ -6,9 +6,8 @@ import plotly.express as px
 import dash_html_components as html
 import dash_core_components as dcc
 from Components import LoadData as d
-print("Mapchart")
-print("depto shape = ",d.perCapDptos.shape)
-print("munic shape = ",d.perCapMunic.shape)
+
+
 df_slice = d.perCapDptos[d.perCapDptos['year'] == 2017].groupby(['cod_dpto','DPNOM']).mean().reset_index()
 
 fig = px.choropleth_mapbox(df_slice,

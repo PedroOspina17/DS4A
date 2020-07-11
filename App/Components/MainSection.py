@@ -10,14 +10,13 @@ import json
 import os
 from Components import MapCharts
 
-print("MainSec")
 
 mainMap = MapCharts.fig
 
 
 mainMap_card = dbc.Card(
     [
-        dbc.CardBody(html.P("Pregnancy outcomes by department", className="card-text")),
+        dbc.CardBody(html.Div('Alive births per capita in Colombia, year 2017',id='mapFigTitle', className="card-text")),
         dcc.Graph(figure=mainMap, id='mainMap')
     ],
     className="ml-2",

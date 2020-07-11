@@ -10,7 +10,6 @@ import json
 import os
 
 
-print("SideB")
 # ToDo: Separate in different files !!
 title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
 
