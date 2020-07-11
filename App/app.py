@@ -11,7 +11,7 @@ import json
 import os
 
 
-
+from Components import SidebarSection, MainSection 
 
 
 
@@ -20,102 +20,16 @@ import os
 # app = dash.Dash(__name__)
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING BOOTSTRAP'S CSS LIBRARY
 
-########################################### Side bar #####################################################
-
-# ToDo: Separate in different files !!
-title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
-
-
-filters = dbc.Card(
-    [
-        dbc.FormGroup(
-            [
-                dbc.Label("X variable"),
-                dcc.Dropdown(
-                    id="x-variable",
-                    options=[
-                        {"label": "option {}".format(col), "value": col} for col in range(10)
-                    ],
-                    value=1,
-                ),
-            ]
-        ),
-        dbc.FormGroup(
-            [
-                dbc.Label("Y variable"),
-                dcc.Dropdown(
-                    id="y-variable",
-                    options=[
-                        {"label": "option {}".format(col), "value": col} for col in range(10)
-                    ],
-                    value=1,
-                ),
-            ]
-        ),
-        dbc.FormGroup(
-            [
-                dbc.Label("temp filter"),
-                dbc.Input(id="cluster-count", type="number", value=3),
-            ]
-        ),
-    ],
-    body=True,
-)
-
-upperContent = dbc.Row(dbc.Col(
-    dbc.Container([filters,html.Hr()],className="h-50")
-    , width="auto"))
 
 
 
-menu = dbc.Row(dbc.Col(
-    dbc.ListGroup([
-        dbc.ListGroupItem("Active item", active=True),
-        dbc.ListGroupItem("Item 2"),
-        dbc.ListGroupItem("Item 3"),
-    ]), width="auto")
-,className="h-50 ml-4")
-
-
-sidebar = dbc.Col([title,upperContent,menu], width=2)
-
-
-
-
-########################################### Main section #####################################################
-
-main_card = dbc.Card(
-    [
-        dbc.CardBody(html.P("Pregnancy outcomes history", className="card-text")),
-        dbc.CardImg(src="/assets/images/mainGraph.png", bottom=True),
-    ],
-    className="ml-2",
-    style={"width": "91%"},
-)
-
-bottom_card = dbc.Card(
-    [
-        dbc.CardBody(html.P("Pregnancy outcomes by department", className="card-text")),
-        dbc.CardImg(src="/assets/images/map2.png", bottom=True),
-    ],
-    className="mt-4 ml-2",
-    style={"width": "20rem"},
-)
-
-
-
-cards = dbc.Row([dbc.Col(bottom_card, width="auto"), dbc.Col(bottom_card, width="auto"), dbc.Col(bottom_card, width="auto")])
-
-main = dbc.Col([main_card,cards], width="auto", className="mt-5")
-
-########################################### Footer #####################################################
 footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
-########################################### App layout #####################################################
+
 app.layout =  html.Div([
     dbc.Row(
             [
-                sidebar,
-                main,
+                SidebarSection.sidebar,
+                MainSection.main,
                 footer
             ]
         )
