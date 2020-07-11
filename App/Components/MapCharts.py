@@ -24,6 +24,7 @@ fig = px.choropleth_mapbox(df_slice,
            opacity=0.7)
 
 fig.update_layout(margin={'l':0,'r':0,'t':0,'b':0},
+                    coloraxis_colorbar = dict(title='',thickness=20),
                      paper_bgcolor="white",
                      font={'family':"Courier New, monospace",
                            'size':18,

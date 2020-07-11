@@ -14,7 +14,6 @@ from Components import LoadData as d
 from Components import MainSection,SidebarSection 
 
 
-print("StartApp")
 
 #Create the app
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING BOOTSTRAP'S CSS LIBRARY
@@ -50,10 +49,10 @@ dptoMap = True       #Tell if we're currently at a full Colombia map
 def slider_interaction(year,PlotVariable,click,button,figure):
     global currDptoData,dptoMap
     print("call1")
-#     print(MainSection.mainMap)
+
     #Tell which input was triggered
     ctx = dash.callback_context
-    print(ctx.triggered)
+
     #If dpto was changed  redraw for this dpto.
     if ctx.triggered[0]['prop_id'] == 'mainMap.clickData':
         print("call4")
@@ -79,9 +78,10 @@ def slider_interaction(year,PlotVariable,click,button,figure):
                        opacity=0.5)
             fig.update_layout(margin={'l':0,'r':0,'t':10,'b':5},
                                  paper_bgcolor="white",
+                                 coloraxis_colorbar = dict(title='',thickness=20),
                                  font={'family':"Courier New, monospace",
                                        'size':18,
-                                       'color':"#F0FFFF"})
+                                       'color':"#212529"})
             return fig
 
         #If click on municip, do nothing
