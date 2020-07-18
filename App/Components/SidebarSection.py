@@ -10,7 +10,6 @@ import json
 import os
 
 
-print("SideB")
 # ToDo: Separate in different files !!
 title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
 
@@ -64,7 +63,7 @@ opts = {'alive':'Total alive births','fetal':'Total fetal deaths',
 dropDownOptions = [{'label':opts[key],'value':key} for key in opts.keys()]
 
 #Slider marks:
-sliderMarks = {year:{'label':str(year),'style':{'color':'#F0FFFF'}} for year in range(2008,2018,2)}
+sliderMarks = {year:{'label':str(year),'style':{'color':'#212529'}} for year in range(2008,2018,2)}
 
 
 #Ctrols
@@ -86,7 +85,7 @@ filters = dbc.Card(
         ),
         dbc.FormGroup(
             [
-                dbc.Label("Age"),
+                dbc.Label("Year"),
                 slrAge
             ]
         ),
@@ -105,8 +104,8 @@ filters = dbc.Card(
 
 
 upperContent = dbc.Row(dbc.Col(
-    dbc.Container([filters,html.Hr()],className="h-50")
-    , width="auto"))
+    dbc.Container([filters,html.Hr()],className="h-50")),
+                style={'width':'auto'})
 
 
 
@@ -120,5 +119,5 @@ menu = dbc.Row(dbc.Col(
 ,className="h-50 ml-4")
 
 
-sidebar = dbc.Col([title,upperContent,menu], width=2)
+sidebar = dbc.Col([title,upperContent,menu], width=3)
 
