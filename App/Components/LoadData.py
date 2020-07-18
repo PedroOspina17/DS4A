@@ -8,10 +8,10 @@ perCapMunic.cod_dpto = perCapMunic.cod_dpto.astype(str).str.zfill(2)
 perCapMunic.id_birth = perCapMunic.id_birth.astype(str).str.zfill(5)
 perCapDptos.cod_dpto = perCapDptos.cod_dpto.astype(str).str.zfill(2)
 
-with open('../Data/GeoData/Dpto.json', 'r') as f:
+with open('../App/data/Dpto.json', 'r') as f:
     Dpto = json.loads(f.read())
     
-with open('../Data/GeoData/Municip.json', 'r') as f:
+with open('../App/data/Municip.json', 'r') as f:
     Munic = json.loads(f.read())
 
     
