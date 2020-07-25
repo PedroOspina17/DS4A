@@ -17,22 +17,21 @@ mainMap = MapCharts.fig
 mainMap_card = dbc.Card(
     [
         dbc.CardBody(html.Div('Alive births per capita in Colombia, year 2017',id='mapFigTitle', className="card-text")),
-        dcc.Graph(figure=mainMap, id='mainMap')
+        dcc.Graph(figure=mainMap, id='mainMap',className="h-100"    )
     ],
-    className="ml-2",
-    style={"width": "35rem",'height':'auto'},
+    className="ml-2 h-100 p-5"    
 )
 
 secundary_card2 = dbc.Card(
     [
         dbc.CardBody(html.P("Stats", className="card-text")),
-        dbc.CardImg(src="/assets/images/Stats2.png"),
-        dbc.CardImg(src="/assets/images/Stats3.png"),
+        dbc.Row([dbc.CardImg(src="/assets/images/Stats2.png")],className='ml-5', style={"width": "90%"}),
+        dbc.Row([dbc.CardImg(src="/assets/images/Stats3.png")],className='mt-5 ml-5', style={"width": "90%"}),
     ],
-    className="mt-4 ml-2",
-    style={"width": "20rem",'height':'auto'},
+    className="ml-2 h-100 p-5"
 )
 
-rightCol = dbc.Col([secundary_card2],width='auto')
-main = dbc.Row([mainMap_card,rightCol],className='mt-5')
+leftCol = dbc.Col([mainMap_card],width='6')
+rightCol = dbc.Col([secundary_card2])
+main = dbc.Col([dbc.Row([leftCol,rightCol])],className='mt-1')
 

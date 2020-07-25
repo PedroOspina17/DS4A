@@ -119,5 +119,5 @@ menu = dbc.Row(dbc.Col(
 ,className="h-50 ml-4")
 
 
-sidebar = dbc.Col([title,upperContent,menu], width=3)
+sidebar = dbc.Col([title,upperContent,menu], width=2)
 
