@@ -59,7 +59,10 @@ filters = dbc.Card(
 opts = {'alive':'Total alive births','fetal':'Total fetal deaths',
         'no_fetal':'Total non-fetal deaths','deaths':'Total deaths',
         'fetal_percapita':'Fetal deaths per capita','no_fetal_percapita':'Non-fetal deaths per capita',
-        'alive_percapita':'Alive births per capita','deaths_percapita':'Deaths per capita'}
+        'alive_percapita':'Alive births per capita','deaths_percapita':'Deaths per capita',
+        'prob_alive':'Probability: Alive','prob_fetal':'Probability: Fetal death',
+        'prob_no_fetal':'Probability: Non fetal death' }
+
 dropDownOptions = [{'label':opts[key],'value':key} for key in opts.keys()]
 
 #Slider marks:
