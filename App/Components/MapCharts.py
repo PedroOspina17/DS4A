@@ -1,10 +1,5 @@
-import dash
-from dash.dependencies import Input, Output, State, ClientsideFunction
-import pandas as pd
-import json 
+
 import plotly.express as px
-import dash_html_components as html
-import dash_core_components as dcc
 from Components import LoadData as d
 
 
@@ -14,10 +9,10 @@ fig = px.choropleth_mapbox(df_slice,
            locations='cod_dpto',
            color='alive_percapita',
            geojson=d.Dpto,
-           zoom=5,
+           zoom=4,
            mapbox_style="carto-positron",
            featureidkey = 'properties.DPTO_CCDGO',
-           color_continuous_scale="PuRd",
+           color_continuous_scale="Blues",
            center={'lat':4.3,'lon':-73},
            hover_name='DPNOM',
            opacity=0.7)

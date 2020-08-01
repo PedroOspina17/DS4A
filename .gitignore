@@ -8,3 +8,5 @@ Notebooks/.ipynb_checkpoints/
 Data/CleanData/CleanDB_FULL.zip
 
 App/components/__pycache__/
+
+.ipynb_checkpoints/
