@@ -41,27 +41,47 @@ body {
 	  height: 257mm;
 	  outline: 2cm whitesmoke solid;
  }
+.subpageFull {
+	  border: 5px #ccc solid;
+	  height: 257mm;
+	  outline: 2cm whitesmoke solid;
+ }
  
  .page-1a {
-   height: 30px;
+	height: 40px;
+    margin-top: 15%;
+    margin-left: 10%;
  }
  
  .page-1b {
    color: white;
-   margin-left: 40px;
+   /* margin-left: 40px; */
+   margin-left: 30%;
  }
  
+ .PageTitle {
+	color: white;
+	margin-left: 41%;
+	font-weight: bold;
+  }
+
+  .title> h5, h6 {
+	color: white;	
+	font-weight: bold;
+  }
+
  .page-1c {
    display: flex;
+   width: 100%;
  }
  
  .page-1d {
-   background-color: #7289ac;
+   background-color: #789fd2;
    margin-top: -38px;
    width: 150%;
    margin-left: -38px;
-   height: 160px;
-   padding: 30px;
+   height: 140px;
+   padding: 15px;
    display: flex;
  }
  
@@ -71,30 +91,59 @@ body {
  
   .page-1f {
    color: white;
-   background-color: #85d393;
+   background-color: #f16071;
    margin-top: -38px;
    margin-right: -38px;
    width: 50%;
-   height: 160px;
-   padding: 30px;
+   height: 140px;
+   padding: 20px;
  }
+
+
+.greenTitle{
+    color: white;
+    font-weight: bold;
+}
  
   .page-1g {
-   display: flex;
+    display: flex;
+    padding: 1cm 1cm 0 1cm;
  }
  
  .page-1h {
-   color: #7289ac;
+   color: #789fd2;
  }
  
  .page-1i {
    margin-top: 30px;
  }
  
- .page-1j {
+.landing {
+   display: block;
+   background-color: #F8F8FF;
+   width: 100%;
+   float: left;
+   text-align: justify;
+   padding-bottom: 30px;
+   
+ }
+
+.landingIMG
+{
+    width: 100%;
+    height: 100%;
+}
+
+.ds4a-Logo {
+	height: 100px;
+	margin-left: 50%;
+  }
+
+.page-1j {
    display: block;
    background-color: #F8F8FF;
    width: 250px;
+   height: 77%;
    float: left;
    text-align: justify;
    padding-bottom: 30px;
@@ -107,7 +156,7 @@ body {
  .page-1k {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   border-left-width: 7px;
   padding-left: 20px;
   margin-top: 30px
@@ -116,7 +165,7 @@ body {
 .page-1l {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #85d393;
+  border-left-color: #F05F70;
   border-left-width: 7px;
   padding-left: 20px;
   margin-top: 20px
@@ -125,7 +174,7 @@ body {
 .page-1m {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   border-left-width: 7px;
   padding-left: 20px;
   margin-top: 20px;
@@ -140,7 +189,7 @@ body {
 }
 
 .page-1o {
-  background-color: #7289ac;
+  background-color: #789fd2;
   color: white;
   width: 200px;
   height: 160px;
@@ -150,7 +199,7 @@ body {
 }
 
 .page-2a {
-  background-color: #7289ac;
+  background-color: #789fd2;
   color: white;
   width: 240px;
   height: 160px;
@@ -173,7 +222,7 @@ body {
  }
  
  .page-3a {
-  background-color: #85d393;
+  background-color: #F05F70;
   color: white;
   width: 200px;
   height: 160px;
@@ -183,7 +232,7 @@ body {
 }
 
 .page-3b {
-  color: #7289ac;
+  color: #789fd2;
   margin-top: 40px;
 }
 
@@ -198,14 +247,14 @@ body {
 .page-3e {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   border-left-width: 7px;
 }
 
 .page-3f {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #85d393;
+  border-left-color: #F05F70;
   margin-top: 20px;
   border-left-width: 7px;
 }
@@ -213,13 +262,13 @@ body {
 .page-3g {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   margin-top: 20px;
   border-left-width: 7px;
 }
 
 .page-3h {
-  color: #7289ac;
+  color: #789fd2;
 }
 
 .page-3i {
@@ -252,7 +301,7 @@ body {
 .page-5 {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   padding: 20px;
   border-left-width: 7px;
 }
@@ -260,7 +309,7 @@ body {
 .page-5a {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #85d393;
+  border-left-color: #F05F70;
   padding: 20px;
   border-left-width: 7px;
   margin-top: 20px; 
@@ -269,7 +318,7 @@ body {
 .page-5b {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   padding: 20px;
   border-left-width: 7px;
   margin-top: 20px; 
@@ -284,7 +333,7 @@ body {
 .page-5d {
   border-left: 5px;
   border-left-style: solid;
-  border-left-color: #7289ac;
+  border-left-color: #789fd2;
   padding: 20px;
   border-left-width: 7px;
   margin-top: 20px;
@@ -329,7 +378,7 @@ body {
 }
 
 .page-6d {
-  color: #7289ac;
+  color: #789fd2;
   float: left;
   margin-left: 25px;
 }
@@ -376,7 +425,7 @@ body {
 
 .page-8a {
   margin-top: 15px;
-  color: #7289ac;
+  color: #789fd2;
 }
 
 .page-8b {
@@ -414,12 +463,12 @@ body {
 
 .page-9g {
   margin-top: 10px;
-  color: #7289ac;
+  color: #789fd2;
 }
 
 .page-9h {
   margin-top: 40px;
-  color: #7289ac;
+  color: #789fd2;
 }
 
 .page-12a {
@@ -428,12 +477,12 @@ body {
 }
 
 .page-12b {
-  color: #7289ac;
+  color: #789fd2;
   margin-top: 30px;
 }
 
 .page-12c {
-  color: #7289ac;
+  color: #789fd2;
   margin-top: 30px;
 }
 

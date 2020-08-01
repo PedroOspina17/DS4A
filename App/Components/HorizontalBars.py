@@ -14,9 +14,9 @@ fig = make_subplots(rows=1, cols=1,vertical_spacing=0.1)
 fig.append_trace(go.Bar(
     x= df_slice["fetalRatio"],y =df_slice["DPNOM"],#width=5,
     marker=dict(
-        color='#c8dfed',
+        color='#dcc0dd',
         line=dict(
-            color='#156bcf',
+            color='#da5887',
             width=1)
     ),
     name='Household savings, percentage of household disposable income',
@@ -59,7 +59,7 @@ for yd, xd, pos in zip(y_s, df_slice["DPNOM"],df_slice["fetalRatio"]):
                             y=xd, x=pos + 0.05,
                             text=str(yd) + '%',
                             font=dict(family='Arial', size=12,
-                                      color='#7289ac'),
+                                      color='#da5887'),
                             showarrow=False))
 
 fig.update_layout(annotations=annotations)
