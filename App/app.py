@@ -1,43 +1,76 @@
-#!/usr/bin/env python3
+
+
 
 import dash
-from dash.dependencies import Input, Output, State, ClientsideFunction
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc 
+from dash.dependencies import Input, Output, State, ClientsideFunction
 import plotly.express as px
 import pandas as pd
 import json
 import os
-from dash.exceptions import PreventUpdate
-from Components import LoadData as d
-from Components import MainSection,SidebarSection 
-
-
+from Components import RecomendationsSection,AnalyticsSection,OverviewSection,SidebarSection
 
 #Create the app
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING BOOTSTRAP'S CSS LIBRARY
 
 
 
+
+
 ####################################################### Layout ###################################################
-footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
+# footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
 
-app.layout =  html.Div([
-    dbc.Col([
-        dbc.Row(
-                [
-                    SidebarSection.sidebar,
-                    MainSection.main,
-                ]
-            ), 
-       footer])
+
+
     
-],className="h-100")
+
+tab1_content = dbc.Card(
+dbc.CardBody(
+    [
+        OverviewSection.component
+        
+    ]
+),
+className="mt-3",
+)
+
+tab2_content = dbc.Card(
+    dbc.CardBody(
+        [
+           AnalyticsSection.component
+        ]
+    ),
+    style={"margin-top":"3%"}
+)
+
+tab3_content = dbc.Card(
+    dbc.CardBody(
+        [
+           RecomendationsSection.component
+        ]
+    ),
+    className="mt-3",
+)
 
 
+tabs = dbc.Tabs(
+    [
+        dbc.Tab(tab1_content, label="Overview"),
+        dbc.Tab(tab2_content, label="Analytics"),
+        dbc.Tab(tab3_content, label="Recomendations")
+    ],
+    className="header",
+)
+
+title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
+app.layout =  html.Div([tabs])
 
 ###################################################### Callbacks ###################################################
+
+
+
 ## Update main map and map title
 titleNamesDict = {value:label for value,label in SidebarSection.opts.items()}
 
@@ -72,7 +105,7 @@ def mapInteraction(year,PlotVariable,click,button,figure):
             newData = currDptoData[currDptoData['year'] == year]
     
             fig = px.choropleth_mapbox(newData,
-                       locations='id_birth',
+                       locations='id_resid',
                        color=PlotVariable,
                        geojson=d.Munic,
                        zoom=4,
@@ -115,17 +148,14 @@ def mapInteraction(year,PlotVariable,click,button,figure):
         region = 'Colombia'
         Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
 
-        return (MainSection.mainMap,Title)
+        return (AnalyticsSection.mainMap,Title)
 
     else:
         Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
         return (figure,Title)
         
     
-
-###################################################### Run the server #########################################################
-
-
-#Initiate the server where the app will work
+###################################################### Run de app server ###################################################    
+    
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(host='0.0.0.0',port='8050',debug=True)

@@ -11,7 +11,7 @@ import os
 
 
 # ToDo: Separate in different files !!
-title = dbc.Container([ html.H1("Borns AI", className="ml-3 mt-3"),html.Hr()])
+
 
 
 filters = dbc.Card(
@@ -110,17 +110,26 @@ upperContent = dbc.Row(dbc.Col(
     dbc.Container([filters,html.Hr()],className="h-50")),
                 style={'width':'auto'})
 
+menu = dbc.Nav(
+            [
+                dbc.NavLink("Overview", href="/page-1", id="page-1-link"),
+                dbc.NavLink("Analytics", href="/page-2", id="page-2-link"),
+                dbc.NavLink("Recomendations", href="/page-3", id="page-3-link"),
+            ],
+            vertical=True,
+            pills=True,
+        )
 
 
 
-menu = dbc.Row(dbc.Col(
-    dbc.ListGroup([
-        dbc.ListGroupItem("Overview"),
-        dbc.ListGroupItem("Analytics", active=True),
-        dbc.ListGroupItem("Recomendations"),
-    ]), width="auto")
-,className="h-50 ml-4")
+# menu = dbc.Row(dbc.Col(
+#     dbc.ListGroup([
+#         dbc.ListGroupItem("Overview"),
+#         dbc.ListGroupItem("Analytics", active=True),
+#         dbc.ListGroupItem("Recomendations"),
+#     ]), width="auto")
+# ,className="h-50 ml-4")
 
 
-sidebar = dbc.Col([title,upperContent,menu], width=3)
+sidebar = dbc.Col([upperContent], width=2)
 
