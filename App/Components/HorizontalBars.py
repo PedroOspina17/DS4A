@@ -13,9 +13,9 @@ fig = go.Figure(go.Bar(
     x= df_slice["fetalRatio"],y =df_slice["DPNOM"],
     orientation = 'h',
     marker=dict(
-        color='#c8dfed',
+        color='#dcc0dd',
         line=dict(
-            color='#156bcf',
+            color='#da5887',
             width=1)
     ),
 ))
@@ -53,7 +53,7 @@ for yd, xd, pos in zip(y_s, df_slice["DPNOM"],df_slice["fetalRatio"]):
                             y=xd, x=pos + 0.03,
                             text=str(yd) + '%',
                             font=dict(family='Arial', size=12,
-                                      color='#7289ac'),
+                                      color='#da5887'),
                             showarrow=False))
 
 fig.update_layout(annotations=annotations)

@@ -10,3 +10,7 @@ Data/CleanData/CleanDB_FULL.zip
 App/components/__pycache__/
 
 .ipynb_checkpoints/
+
+Data/CleanDB_FULL_DsOrigin_RandomSample_NumCat.csv
+
+Data/tmp/
