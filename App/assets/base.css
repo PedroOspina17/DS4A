@@ -46,6 +46,24 @@ body {
 	  height: 257mm;
 	  outline: 2cm whitesmoke solid;
  }
+
+ .pink-item{
+	border-left: 5px;
+    border-left-style: solid;
+    border-left-color: #F05F70;
+    border-left-width: 7px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.blue-item{
+	border-left: 5px;
+    border-left-style: solid;
+    border-left-color: #789fd2;
+    border-left-width: 7px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
  
  .page-1a {
 	height: 40px;
