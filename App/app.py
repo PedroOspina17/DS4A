@@ -163,4 +163,4 @@ def mapInteraction(year,PlotVariable,click,button,mapPlot,barPlot):
 ###################################################### Run de app server ###################################################    
     
 if __name__ == "__main__":
-    app.run_server(host='0.0.0.0',port='8050',debug=True)
+    app.run_server(host='0.0.0.0',port='80',debug=True)
