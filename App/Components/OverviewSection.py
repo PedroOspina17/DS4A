@@ -30,7 +30,9 @@ def getHeader(headerTitle, headerSubtitle = None, headerSubtitleStyles = None):
 					html.Div(
 						[
 							html.Div(
-								html.Img(src="assets/ds4a2.png",className="ds4a-Logo")
+								[
+									html.Img(src="assets/DS4A_colombia1.jpeg",className="ds4a-Logo")
+								]
 							),
 							html.Div(
 								[
@@ -50,8 +52,8 @@ def getHeader(headerTitle, headerSubtitle = None, headerSubtitleStyles = None):
 				[
 					html.H1(
 						[
-							html.Span("20", className="page-1e"),
-							html.Span("20"),
+							html.Span("20", className="page-1e",style={"font-size": "4.2rem"}),
+							html.Span("20",style={"font-size": "4.2rem"}),
 							html.H5("BORN AI"),
 						]
 					),
@@ -99,8 +101,8 @@ component = html.Div(
                                     [
                                         html.H1(
                                             [
-                                                html.Span("20", className="page-1e"),
-                                                html.Span("20"),
+                                                html.Span("20", className="page-1e",style={"font-size": "4.2rem"}),
+                                                html.Span("20",style={"font-size": "4.2rem"}),
                                                 html.H5("Data science for All"),
                                             ]
                                         ),
@@ -115,10 +117,7 @@ component = html.Div(
                             [
                                 html.Div(
                                     [                                        
-                                        html.Img(
-                                                        src="assets/testLanding1.jpg",
-                                                        className="landingIMG",
-                                                    )
+                                        html.Img(src="assets/testLanding3.jpeg",className="landingIMG",)
                                     ],
                                     className="",
                                 ),
@@ -136,107 +135,142 @@ component = html.Div(
                 html.Div(
                     [
                         getHeader("TEAM 4"),
-						################# Names section
+						################# Profiles section
                         html.Div(
                             [
-                                html.Div(
+								html.Div(
                                     [
-                                        html.H6("Pedro N. Ospina", className="page-1h"),
-                                        html.P("300-242-9195"),
-                                        html.P("pedroospina17@gmail.com"),
-                                    ],
-                                    className="page-1i",
-                                ),
-                                html.Div(
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/manCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+														html.H4("Pedro N. Ospina",className="page-1h font-weight-bold"),
+														html.Span("Ing. Sistemas",className="d-block font-weight-bold"),
+														html.Span("300-242-9195",className="d-block"),
+														html.Span("pedroospina17@gmail.com",className="d-block"),
+													],
+													className="blue-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/womanCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+														html.H4("Melissa Aguilar",className="page-1h font-weight-bold"),
+														html.Span("Ing. Física",className="d-block font-weight-bold"),
+														html.Span("913-823-9541",className="d-block"),
+														html.Span("melaguilarza@gmail.com",className="d-block"),
+													],
+													className="pink-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/manCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+														html.H4("Andres C. Marulanda",className="page-1h font-weight-bold"),
+														html.Span("Químico",className="d-block font-weight-bold"),
+														html.Span("913-823-9541",className="d-block"),
+														html.Span("acamilo.marulanda@udea.edu.co",className="d-block"),
+													],
+													className="blue-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),																			
+									], className="six columns",
+								),
+								html.Div(
                                     [
-                                        html.H6("Andres C. Marulanda", className="page-1h"),
-                                        html.P("497-234-2837r"),
-                                        html.P("isw@vxogiqyds.umf"),
-                                    ],
-                                    className="page-1i",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6(
-                                            "Melissa Aguilar", className="page-1h"
-                                        ),
-                                        html.P("913-823-9541"),
-                                        html.P("rgd@hp.xji"),
-                                    ],
-                                    className="page-1i",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6("Angélica Rincon", className="page-1h"),
-                                        html.P("248-865-2687"),
-                                        html.P("mc@a.kur"),
-                                    ],
-                                    className="page-1i",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6("Jenny Lancheros", className="page-1h"),
-                                        html.P("284-671-3721"),
-                                        html.P("j@jdvwnqucm.etv"),
-                                    ],
-                                    className="page-1i",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6("Santiago Morales", className="page-1h"),
-                                        html.P("284-671-3721"),
-                                        html.P("j@jdvwnqucm.etv"),
-                                    ],
-                                    className="page-1i",
-                                ),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/womanCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+														html.H4("Angélica Rincon",className="page-1h font-weight-bold"),
+														html.Span("Matemática",className="d-block font-weight-bold"),
+														html.Span("913-823-9541",className="d-block"),
+														html.Span("barincon23@gmail.com",className="d-block"),
+													],
+													className="pink-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/manCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+
+														html.H4("Santiago Morales",className="page-1h font-weight-bold"),
+														html.Span("Físico",className="d-block font-weight-bold"),
+														html.Span("913-823-9541",className="d-block"),
+														html.Span("santiagomoralessaldarriaga@gmail.com",className="d-block"),
+													],
+													className="blue-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.Img(src="assets/womanCircle.png",className="profile-padge",),
+													],
+													className="px-5 four columns",
+												),
+												html.Div(
+													[
+														html.H4("Jenny Lancheros",className="page-1h font-weight-bold"),
+														html.Span("Admistradora - Estadistica",className="d-block font-weight-bold"),
+														html.Span("913-823-9541",className="d-block"),
+														html.Span("jlanch14@hotmail.com",className="d-block"),
+													],
+													className="pink-item columns eight",
+												),
+											],
+											className="w-100 d-inline-block mt-5",
+										),
+										
+										
+									], className="six columns",
+								)
                             ],
-                            className="page-1j",
-                        ),
-						################# Items section
-                        html.Div(
-                            [
-                                html.Div(
-                                    [
-                                        html.H6(
-                                            "Viverra, imperdiet, praesent pellentesque",
-                                            className="page-1h",
-                                        ),
-                                        html.P(lorem.paragraph() * 2),
-                                    ],
-                                    className="page-1k",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6(
-                                            "Facilisis mauris parturient, eget vitae",
-                                            className="page-1h",
-                                        ),
-                                        html.P(lorem.paragraph() * 2),
-                                    ],
-                                    className="page-1l",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6(
-                                            "A suspendisse mauris aliquam tincidunt hac",
-                                            className="page-1h",
-                                        ),
-                                        html.P(lorem.paragraph() * 2),
-                                    ],
-                                    className="page-1m",
-                                ),
-                                html.Div(
-                                    [
-                                        html.H6(
-                                            "A elementum lorem dolor aliquam nisi diam",
-                                            className="page-1h",
-                                        ),
-                                        html.P(lorem.paragraph()),
-                                    ],
-                                    className="page-1l",
-                                ),
-                            ],
-                            className="page-1n",
+                            className="page-1n w-100",
                         ),
                     ],
                     className="subpage",
@@ -251,10 +285,10 @@ component = html.Div(
                     [
                         getHeader("OVERVIEW","Global comparison"),
                         html.Div( # Paragraph: ToDo
-                            [
-                                html.P("As of 2011, The World Health Organization (WHO for its acronym) estimates that about 4 million neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]. Accordingly, perinatal (period between 20 weeks before, and 4 weeks after birth) and neonatal mortality is now a part of the 2030 agenda for Sustainable Development of the United Nations and is also one of the topics of interest to the Colombian Ministry of Health [2].", className="page-2b"),
-                                html.P("This work is aimed to be a comprehensive analysis of different databases related to perinatal and neonatal death, as well as demographic, economic, social and geographic data for Colombia, that can help us understand which features may influence and contribute to said death rate in different locations in the country by looking for possible correlations that may constitute the first step to the search for solutions to this global health issue.", className="page-2c"),
-                                html.P("Characterization of the social, economic, demographic and geological variables that can be correlated and may have an impact on the newborn and fetal death rates is of capital importance for the localization of the most affected regions, as well as for the identification of causal relationships between said factors and, upon inclusion of larger databases, identification and prediction of new significant factors, as well as the prediction of future outcomes. Such an analysis may eventually lead to the implementation of more specialized and well-designed social programs, as well as health campaigns, among other humanitarian initiatives.", className="page-2c"),
+                            [                                                                
+                                html.P(["As of 2011, The World Health Organization (WHO for its acronym) estimates that about ",html.Span("4 million",className="important-blue"), " neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]. Accordingly, perinatal (period between 20 weeks before, and 4 weeks after birth) and neonatal mortality is now a part of the 2030 agenda for Sustainable Development of the United Nations and is also one of the topics of interest to the Colombian Ministry of Health [2]."], className="page-2b"),
+								html.P(["Create some specific useful information, with big sumbers, such as  ",html.Span("80K",className="important-pink"), " awdadawdada ada wda dawd"]),
+								
                             ],
                             className="page-3",
                         ),
@@ -270,7 +304,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("As of 2011, The World Health Organization (WHO for its acronym) estimates that about 4 million neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]. Accordingly, perinatal (period between 20 weeks before, and 4 weeks after birth) and neonatal mortality is now a part of the 2030 agenda for Sustainable Development of the United Nations and is also one of the topics of interest to the Colombian Ministry of Health [2].", className="page-2b"),
 													],
 													className="pink-item"
 												),
@@ -280,7 +314,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("This work is aimed to be a comprehensive analysis of different databases related to perinatal and neonatal death, as well as demographic, economic, social and geographic data for Colombia, that can help us understand which features may influence and contribute to said death rate in different locations in the country by looking for possible correlations that may constitute the first step to the search for solutions to this global health issue.", className="page-2c"),
 													],
 													className="blue-item"
 												),
@@ -290,20 +324,10 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("Characterization of the social, economic, demographic and geological variables that can be correlated and may have an impact on the newborn and fetal death rates is of capital importance for the localization of the most affected regions, as well as for the identification of causal relationships between said factors and, upon inclusion of larger databases, identification and prediction of new significant factors, as well as the prediction of future outcomes. Such an analysis may eventually lead to the implementation of more specialized and well-designed social programs, as well as health campaigns, among other humanitarian initiatives.", className="page-2c"),
 													],
 													className="pink-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*5),
-													],
-													className="blue-item"
-												),
+												),												
 												
 											], className="six columns"
 										),
@@ -373,7 +397,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*3),
 													],
 													className="blue-item"
 												),
@@ -415,9 +439,8 @@ component = html.Div(
 													className="page-1h",
 												),
 												html.P(lorem.paragraph() * 3),
-												html.P(lorem.paragraph()  * 2),
 												html.P(lorem.paragraph()),
-												html.P(lorem.paragraph()*5),
+												html.P(lorem.paragraph()),
 											],
 											className=""
 										),												
@@ -482,7 +505,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*2),
 													],
 													className="blue-item"
 												),
@@ -563,7 +586,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*3),
+														html.P(lorem.paragraph()*2),
 													],
 													className="blue-item",
 													style = {"margin-top": "10%"}
@@ -631,7 +654,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*3),
 													],
 													className="blue-item"
 												),
@@ -710,7 +733,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*3),
 													],
 													className="blue-item"
 												),
@@ -777,7 +800,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*3),
 													],
 													className="blue-item"
 												),

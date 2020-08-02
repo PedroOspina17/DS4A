@@ -13,9 +13,9 @@ fig = go.Figure(go.Bar(
     x= df_slice["fetalRatio"],y =df_slice["DPNOM"],
     orientation = 'h',
     marker=dict(
-        color='#dcc0dd',
+        color='#03AEA4',
         line=dict(
-            color='#da5887',
+            color='#044D6E',
             width=1)
     ),
 ))
@@ -53,7 +53,7 @@ for yd, xd, pos in zip(y_s, df_slice["DPNOM"],df_slice["fetalRatio"]):
                             y=xd, x=pos + 0.03,
                             text=str(yd) + '%',
                             font=dict(family='Arial', size=12,
-                                      color='#da5887'),
+                                      color='#044D6E'),
                             showarrow=False))
 
 fig.update_layout(annotations=annotations)
@@ -68,9 +68,9 @@ GeneralFig = make_subplots(rows=1, cols=1,vertical_spacing=0.1)
 GeneralFig.append_trace(go.Bar(
     x= toplotGeneral["fetalRatio"],y =toplotGeneral["DPNOM"],#width=5,
     marker=dict(
-        color='#dcc0dd',
+        color='#03AEA4',
         line=dict(
-            color='#da5887',
+            color='#044D6E',
             width=1)
     ),
     name='Household savings, percentage of household disposable income',
@@ -113,7 +113,7 @@ for yd, xd, pos in zip(y_s, toplotGeneral["DPNOM"],toplotGeneral["fetalRatio"]):
                             y=xd, x=pos + 0.02,
                             text=str(yd) + '%',
                             font=dict(family='Arial', size=12,
-                                      color='#da5887'),
+                                      color='#044D6E'),
                             showarrow=False))
 
 GeneralFig.update_layout(annotations=annotations)
@@ -129,10 +129,10 @@ def update_barfig(newData,PlotVariable,y='mpio_name'):
         y = barsData[y],
         orientation = 'h',
         marker=dict(
-            color='#dcc0dd',
+            color='#03AEA4',
             line=dict(
-            color='#da5887',
-            width=1)
+				color='#044D6E',
+				width=1)
         ),
     ))
     
@@ -168,7 +168,7 @@ def update_barfig(newData,PlotVariable,y='mpio_name'):
                                 y=xd, x=pos + 0.4 ,
                                 text=str(yd) ,
                                 font=dict(family='Arial', size=12,
-                                          color='#7289ac'),
+                                          color='#044D6E'),
                                 showarrow=False))
     
     barfig.update_layout(annotations=annotations)

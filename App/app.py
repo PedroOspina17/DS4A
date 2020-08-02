@@ -56,7 +56,7 @@ tabs = dbc.Tabs(
     [
        dbc.Tab(tab1_content, label="Overview"),
         dbc.Tab(tab2_content, label="Analytics"),
-        dbc.Tab(tab3_content, label="Recomendations")
+        dbc.Tab(tab3_content, label="Models")
     ],
     className="header",
 )
