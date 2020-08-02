@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import json
 import os
-from Components import RecomendationsSection,AnalyticsSection,SidebarSection#,OverviewSection
+from Components import RecomendationsSection,AnalyticsSection,SidebarSection,OverviewSection
 from Components import LoadData as Data
 from Components import HorizontalBars
 
@@ -23,15 +23,15 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING 
 # footer = html.Div("Team 4 -- Borns AI", className ="mx-auto font-weight-bold fot-italic mt-5 text-muted")
     
 
-#tab1_content = dbc.Card(
-#dbc.CardBody(
-#    [
-#        OverviewSection.component
-#        
-#    ]
-#),
-#className="mt-3",
-#)
+tab1_content = dbc.Card(
+dbc.CardBody(
+   [
+       OverviewSection.component
+       
+   ]
+),
+className="mt-3",
+)
 
 tab2_content = dbc.Card(
     dbc.CardBody(
@@ -54,7 +54,7 @@ tab3_content = dbc.Card(
 
 tabs = dbc.Tabs(
     [
-#        dbc.Tab(tab1_content, label="Overview"),
+       dbc.Tab(tab1_content, label="Overview"),
         dbc.Tab(tab2_content, label="Analytics"),
         dbc.Tab(tab3_content, label="Recomendations")
     ],

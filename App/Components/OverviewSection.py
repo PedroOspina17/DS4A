@@ -473,7 +473,8 @@ component = html.Div(
 														),
 														html.P(lorem.paragraph()),
 													],
-													className="pink-item"
+													className="pink-item",
+													style = {"margin-top": "26%"}
 												),
 												html.Div(
 													[
@@ -519,7 +520,7 @@ component = html.Div(
 										
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_top.png",style={"width": "70%"})
+												html.Img(src="assets/fig1_col_top.png",style={"width": "48%"})
 											],
 											className="six columns"
 										),
@@ -543,7 +544,8 @@ component = html.Div(
 														),
 														html.P(lorem.paragraph()),
 													],
-													className="blue-item"
+													className="blue-item",
+													style = {"margin-top": "26%"}
 												),
 												html.Div(
 													[
@@ -561,9 +563,10 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*5),
+														html.P(lorem.paragraph()*3),
 													],
-													className="blue-item"
+													className="blue-item",
+													style = {"margin-top": "10%"}
 												),
 												
 											], className="six columns"
@@ -637,7 +640,7 @@ component = html.Div(
 										),
 										html.Div(
 											[
-												html.Img(src="assets/LogitCoeffs.png",style={"width": "70%"})
+												html.Img(src="assets/LogitCoeffs.png",style={"width": "100%"})
 											],
 											className="six columns"
 										),
@@ -665,7 +668,7 @@ component = html.Div(
                                     [	
 										html.Div(
 											[
-												html.Img(src="assets/Maps.png",style={"width": "70%"})
+												html.Img(src="assets/Maps.png",style={"width": "94%"})
 											],
 											className="six columns"
 										),
