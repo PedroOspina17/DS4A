@@ -26,7 +26,7 @@ mainMap_card = dbc.Card(
 secundary_card2 = dbc.Card(
     [
         dbc.CardBody(
-        [html.Div('Alive births per capita in Colombia, year 2017',id='barPlotTitle', className="card-text"),
+        [html.Div('Top 15',id='barPlotTitle', className="card-text"),
         dcc.Graph(figure=sideBars, id='barPlot',style={"height":"500px"})])
         
     ],
