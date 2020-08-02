@@ -82,7 +82,7 @@ filters = dbc.Card(
     [
         dbc.FormGroup(
             [
-                dbc.Label("Data to show"),
+                html.Span("Data to show"),
                 ddlDataToShow
             ]
         ),
