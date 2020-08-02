@@ -94,7 +94,6 @@ filters = dbc.Card(
         ),
         dbc.FormGroup(
             [
-                dbc.Label("Clear depto filter"),
                 btnBack
             ]
         ),
@@ -106,9 +105,10 @@ filters = dbc.Card(
 #######################################################################################################################################
 
 
-upperContent = dbc.Row(dbc.Col(
-    dbc.Container([filters,html.Hr()],className="h-50")),
-                style={'width':'auto'})
+upperContent = dbc.Col([filters],width='auto')
+
+# dbc.Container([filters,html.Hr()],className="h-50"),
+ #               style={'width':'320px'})
 
 menu = dbc.Nav(
             [
@@ -120,16 +120,5 @@ menu = dbc.Nav(
             pills=True,
         )
 
-
-
-# menu = dbc.Row(dbc.Col(
-#     dbc.ListGroup([
-#         dbc.ListGroupItem("Overview"),
-#         dbc.ListGroupItem("Analytics", active=True),
-#         dbc.ListGroupItem("Recomendations"),
-#     ]), width="auto")
-# ,className="h-50 ml-4")
-
-
-sidebar = dbc.Col([upperContent], width=2)
+sidebar = upperContent
 
