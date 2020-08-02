@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import json
 import os
-from Components import RecomendationsSection,AnalyticsSection,SidebarSection
+from Components import RecomendationsSection,AnalyticsSection,SidebarSection#,OverviewSection
 from Components import LoadData as Data
 from Components import HorizontalBars
 
@@ -54,7 +54,7 @@ tab3_content = dbc.Card(
 
 tabs = dbc.Tabs(
     [
-        #dbc.Tab(tab1_content, label="Overview"),
+#        dbc.Tab(tab1_content, label="Overview"),
         dbc.Tab(tab2_content, label="Analytics"),
         dbc.Tab(tab3_content, label="Recomendations")
     ],

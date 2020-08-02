@@ -70,10 +70,10 @@ def update_barfig(newData,PlotVariable,y='mpio_name'):
         y = barsData[y],
         orientation = 'h',
         marker=dict(
-            color='#c8dfed',
+            color='#dcc0dd',
             line=dict(
-                color='#156bcf',
-                width=1)
+            color='#da5887',
+            width=1)
         ),
     ))
     
