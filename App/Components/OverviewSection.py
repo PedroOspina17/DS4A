@@ -117,7 +117,7 @@ component = html.Div(
                             [
                                 html.Div(
                                     [                                        
-                                        html.Img(src="assets/testLanding_v2.png",className="landingIMG",)
+                                        html.Img(src="assets/testLanding_v3.png",className="landingIMG",)
                                     ],
                                     className="",
                                 ),
