@@ -32,6 +32,7 @@ body {
 	line-height: 25pt;
 	font-family: serif;
 	font-size: x-large;
+	text-align: justify;
  }
 
  span:not(.rc-slider-mark-text){
@@ -47,8 +48,26 @@ body {
  }
 
  
+.bigTitles{
+	font-size: xx-large;
+    color: #003E5E;
+}
 
-
+ul {
+	list-style: none; /* Remove default bullets */
+  }
+  
+  .coloredList li::before {
+	/*content: "\2022";   /* Add content: \2022 is the CSS Code/unicode for a bullet, 26AB for big bullet*/
+	/*content: "\27A4";/* ArrowHead*/
+	content: "\25C9";/* eye fish*/
+	/*content: "\2666";/* Diamond*/
+	color: #03AEA4; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	/*margin-left: -1em;  Also needed for space (tweak if needed) */
+  }
 
 .header
 {
@@ -109,7 +128,21 @@ body {
     padding-left: 20px;
     margin-top: 20px;
 }
- 
+
+.yellow-item{
+	border-left: 5px;
+    border-left-style: solid;
+    border-left-color: #F8A528;
+    border-left-width: 7px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.subtitle-item{
+	color: #003E5E;
+    font-size: xx-large;
+}
+
 .profile-padge{
 	border-radius: 100%;
     width: 140px;
@@ -123,6 +156,11 @@ body {
 
 .important-blue{
 	color: #003E5E;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.important-yellow{
+	color: #F8A528;
     font-size: xx-large;
     font-weight: bold;
 }

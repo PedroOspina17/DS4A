@@ -17,7 +17,7 @@ sideBars = HorizontalBars.fig
 mainMap_card = dbc.Card(
     [
         dbc.CardBody(
-        [html.Div('Alive births per capita in Colombia, year 2017',id='mapFigTitle', className="card-text"),
+        [html.Div('Alive births per capita in Colombia, year 2017',id='mapFigTitle', className="bigTitles"),
         dcc.Graph(figure=mainMap, id='mainMap',style={"height":"500px"})])
     ],
     className="ml-1 h-100 p-3"    
@@ -26,7 +26,7 @@ mainMap_card = dbc.Card(
 secundary_card2 = dbc.Card(
     [
         dbc.CardBody(
-        [html.Div('Alive births per capita in Colombia, year 2017',id='barPlotTitle', className="card-text"),
+        [html.Div('Alive births per capita in Colombia, year 2017',id='barPlotTitle', className="bigTitles"),
         dcc.Graph(figure=sideBars, id='barPlot',style={"height":"500px"})])
         
     ],

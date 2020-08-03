@@ -117,7 +117,7 @@ component = html.Div(
                             [
                                 html.Div(
                                     [                                        
-                                        html.Img(src="assets/testLanding3.jpeg",className="landingIMG",)
+                                        html.Img(src="assets/testLanding_v2.png",className="landingIMG",)
                                     ],
                                     className="",
                                 ),
@@ -283,15 +283,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("OVERVIEW","Global comparison"),
-                        html.Div( # Paragraph: ToDo
-                            [                                                                
-                                html.P(["As of 2011, The World Health Organization (WHO for its acronym) estimates that about ",html.Span("4 million",className="important-blue"), " neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]. Accordingly, perinatal (period between 20 weeks before, and 4 weeks after birth) and neonatal mortality is now a part of the 2030 agenda for Sustainable Development of the United Nations and is also one of the topics of interest to the Colombian Ministry of Health [2]."], className="page-2b"),
-								html.P(["Create some specific useful information, with big sumbers, such as  ",html.Span("80K",className="important-pink"), " awdadawdada ada wda dawd"]),
-								
-                            ],
-                            className="page-3",
-                        ),
+                        getHeader("CONTEXT","Definitions"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -300,40 +292,113 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P("As of 2011, The World Health Organization (WHO for its acronym) estimates that about 4 million neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]. Accordingly, perinatal (period between 20 weeks before, and 4 weeks after birth) and neonatal mortality is now a part of the 2030 agenda for Sustainable Development of the United Nations and is also one of the topics of interest to the Colombian Ministry of Health [2].", className="page-2b"),
+														html.H6("Stillbirth:",className="subtitle-item"),
+														html.P(["Stillbirth definition"]
+																, className=""
+															),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"5%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P("This work is aimed to be a comprehensive analysis of different databases related to perinatal and neonatal death, as well as demographic, economic, social and geographic data for Colombia, that can help us understand which features may influence and contribute to said death rate in different locations in the country by looking for possible correlations that may constitute the first step to the search for solutions to this global health issue.", className="page-2c"),
+														html.H6("Neonate:",className="subtitle-item"),
+														html.P(["Neonate definition"]
+																, className=""
+															),
 													],
-													className="blue-item"
+													className="blue-item",style={"margin-top":"5%"}
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P("Characterization of the social, economic, demographic and geological variables that can be correlated and may have an impact on the newborn and fetal death rates is of capital importance for the localization of the most affected regions, as well as for the identification of causal relationships between said factors and, upon inclusion of larger databases, identification and prediction of new significant factors, as well as the prediction of future outcomes. Such an analysis may eventually lead to the implementation of more specialized and well-designed social programs, as well as health campaigns, among other humanitarian initiatives.", className="page-2c"),
-													],
-													className="pink-item"
-												),												
+												
 												
 											], className="six columns"
 										),
 										html.Div(
 											[
-												dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
+												html.Div(
+													[
+														html.H6("Infant:",className="subtitle-item"),
+														html.P(["Stillbirth definition"]
+																, className=""
+															),
+													],
+													className="pink-item",style={"margin-top":"5%"}
+												),
+												html.Div(
+													[
+														html.H6("perinatal:",className="subtitle-item"),
+														html.P(["Neonate definition"]
+																, className=""
+															),
+													],
+													className="blue-item",style={"margin-top":"5%"}
+												),																						
+											],
+											className="six columns"
+										),
+										html.Div(
+											[
+												html.Img(src="assets/BabyTimes.png",style={"width": "90%","margin-left":"10%","margin-top":"2%"})												
+											],
+											className="ten columns"
+										)
+                                    ],
+									className="row w-100"
+								),								
+                            ],
+                            className="page-1n w-100",
+                        ),
+                    ],
+                    className="subpage",
+                )
+            ],
+            className="page",
+        ),		
+		#################################################### Page 2 --- OVERVIEW - GLOBAL
+        html.Div(
+            [
+                html.Div(
+                    [
+                        getHeader("OVERVIEW","Global comparison"),
+                        html.Div( # Color conclusions and graphs:  ToDo
+                            [
+                                html.Div(
+                                    [	
+										html.Div(
+											[
+												html.Div(
+													[
+														html.P(["As of 2011, The World Health Organization (WHO for its acronym) estimates that about ",html.Span("4 million",className="important-yellow"), " neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]."]
+																, className="page-2b"
+															),
+													],
+													className="pink-item",style={"margin-top":"10%"}
+												),
+												html.Div(
+													[
+														html.P(" ."
+																, className="page-2c"
+															),
+													],
+													className="blue-item",style={"margin-top":"10%"}
+												),
+
+												html.Div(
+													[
+														html.P([html.Span("BOY DIE MORE THAN GIRLS ?",className="important-blue"),".... Some useful dates... Numbers: ",html.Span("28.9",className="important-pink")," for every 1000 births",""]
+																, className="page-2c"
+															),
+													],
+													className="pink-item",style={"margin-top":"10%"}
+												),
+																							
+												
+											], className="six columns"
+										),
+										html.Div(
+											[
+												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
+												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "70%"}),
+												html.Img(src="assets/AmericasNumbers.png",style={"width": "100%"})
 											],
 											className="six columns"
 										),
@@ -367,10 +432,10 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P(".", className="page-2c"),
 													],
 													className="pink-item"
-												),
+												),	
 												html.Div(
 													[
 														html.H6(
@@ -387,20 +452,11 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P(),
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -438,8 +494,8 @@ component = html.Div(
 													"Facilisis mauris parturient, eget vitae",
 													className="page-1h",
 												),
-												html.P(lorem.paragraph() * 3),
 												html.P(lorem.paragraph()),
+												html.P("adadawd"),
 												html.P(lorem.paragraph()),
 											],
 											className=""
@@ -488,27 +544,7 @@ component = html.Div(
 													],
 													className="blue-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item",
-													style = {"margin-top": "26%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*2),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -580,17 +616,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*2),
-													],
-													className="blue-item",
-													style = {"margin-top": "10%"}
-												),
+												
 												
 											], className="six columns"
 										),
@@ -648,16 +674,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -727,16 +744,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -800,7 +808,7 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()*3),
+														html.P(lorem.paragraph()),
 													],
 													className="blue-item"
 												),
