@@ -35,7 +35,7 @@ def getHeader(headerTitle, headerSubtitle = None, headerTitleStyles = None,heade
 							html.Div(
 								[
 									
-									html.H1(headerTitle),
+									html.H1(headerTitle,style=headerTitleStyles),
 									html.H3(headerSubtitle,style=headerSubtitleStyles) if headerSubtitle else None,
 								],
 								className="PageTitle",
@@ -71,39 +71,51 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("¿How can we model fetal mortality in colombia?",headerTitleStyles = {"margin-left": "-160px","margin-top": "5px"}),
+                        getHeader("¿How can we model fetal mortality in colombia?",headerTitleStyles = {"margin-left": "-160px","margin-top": "-10px"}),
                         html.Div( # JUST TEXT ??:  ToDo
                             [
-                                html.Div(
-                                    [											
-										html.Div(
-											[
-												html.H4(
-													"¿How can we model fetal mortality in colombia?",
-													className="page-1h",
-												),
+                                # html.Div(
+                                #     [											
+								# 		html.Div(
+								# 			[
+												# html.H4(
+												# 	"¿How can we model fetal mortality in colombia?",
+												# 	className="page-1h",
+												# ),
 												html.P("The following models presented have the objective of knowing the forecast and probabilities that the result of the gestation process will be successful or not. "),
-												html.P("These models are the result of the combination of 5 features of the pregnancy process and the environment where it develops. These characteristics are:"),
-												html.Ul(
+												html.P("These models are the result of the combination of 5 features of the pregnancy process and the environment where it develops. "),
+												html.P("These characteristics are:"),
+												html.Div(
 													[
-														html.Li(" Number of pregnancies the mother has previously had."),
-														html.Li(" Multiplicity of pregnancy (type of pregnancy)."),
-														html.Li(" Type of access to social security."),
-														html.Li(" Department (Region) of the country where the mother lives"),
-														html.Li("Conditions of the mother's place of residence."),
-														html.Li("Mother's education level.")
-													]
+														html.Div(
+															[
+																html.Ul(
+																	[
+																		html.Li(" Number of pregnancies the mother has previously had."),
+																		html.Li(" Multiplicity of pregnancy (type of pregnancy)."),
+																		html.Li(" Type of access to social security."),
+																		html.Li(" Department where the mother lives"),
+																		html.Li(" Conditions of the mother's place of residence."),
+																		html.Li(" Mother's education level.")
+																	],className="coloredList"
+																)
+															], className="five columns"
+														),
+														html.Div(
+															[
+																html.Img(src="assets/ModelFeaturesPresentation.png",style={"width": "100%"}),
+															], className="seven columns"
+														)
+													],className="mt-lg-5"
 												)
-											],
-											className=""
-										),												
-                                    ],
-									className="row w-100"
-								),		
-
-								html.Img(src="assets/ModelFeaturesPresentation.png",style={"width": "80%"}),						
+										# 	],
+										# 	className=""
+										# ),												
+                                #     ],
+								# 	className="row w-100"
+								# ),		
                             ],
-                            className="page-1n w-100 mt-3",
+                            className="page-1n w-100 mt-lg-5",
                         ),
                     ],
                     className="subpage",
@@ -116,7 +128,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Classification"),
+                        getHeader("Logistic regression",headerTitleStyles = {"margin-left": "-34%","margin-top": "5%"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -125,38 +137,26 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6(
-															"Logistic regression.",
-															className="page-1h",
-														),
 														html.P("With the combination of each of the parameters mentioned above, we can find the probability that the result of the gestation process is successful or not. Which can help the mother with a low probability of a successful pregnancy, seek professional help to increase it."),
-														html.P("The behavior of each of the characteristics mentioned above is observed in the figure on the right. Where the strongest shades of color for each characteristic show a greater probability that the pregnancy result will not be positive.Only the final combination of the probabilities of each characteristic will give us the total prediction of the model.")
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"15%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"Random forest",
-															className="page-1h",
-														),
-														html.P("This predictive method gives us the importance of each of the characteristics when defining whether or not the pregnancy will be successful, which are shown in the graph on the right."),
-														html.P("In this graph it is observed that with this combination of characteristics the most important when defining the outcome of the pregnancy is multiplicity of the pregnancy, followed by the number of pregnancies that the mother has previously had"),
+														html.P("The behavior of each of the characteristics mentioned above is observed in the figure on the right. Where the strongest shades of color for each characteristic show a greater probability that the pregnancy result will not be positive.Only the final combination of the probabilities of each characteristic will give us the total prediction of the model.")
 													],
-													className="blue-item",style={"margin-top":"20%"}
-												),
-												
-												
-											], className="six columns"
+													className="blue-item",style={"margin-top":"15%"}
+												),												
+											], className="five columns"
 										),
 										html.Div(
 											[												
 												html.Img(src="assets/LogitCoeffs.png",style={"width": "100%","margin-top":"3%"})
 											],
-											className="six columns"
+											className="seven columns"
 										),
                                     ],
-									className="row w-100"
+									className="row w-100 mt-5"
 								),								
                             ],
                             className="page-1n w-100 mt-3",
@@ -172,7 +172,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Random forest",headerTitleStyles = {"margin-left": "-34%","margin-top": "5%"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -180,59 +180,30 @@ component = html.Div(
 										
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_top.png",style={"width": "48%"})
+												html.Img(src="assets/FeaturesImportance.png",style={"width": "100%"})
 											],
-											className="six columns"
+											className="eight columns"
 										),
 										html.Div(
 											[
 												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
+													[														
+														html.P("This predictive method gives us the importance of each of the characteristics when defining whether or not the pregnancy will be successful."),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"9%"}
 												),
+
 												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
+													[																												
+														html.P("It can be seen that among this combination of characteristics the most important when defining the outcome of the pregnancy is multiplicity of the pregnancy, followed by the number of pregnancies that the mother has previously had"),
 													],
-													className="blue-item",
-													style = {"margin-top": "26%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*2),
-													],
-													className="blue-item",
-													style = {"margin-top": "10%"}
+													className="blue-item",style={"margin-top":"13%"}
 												),
 												
-											], className="six columns"
+											], className="four columns"
 										),
                                     ],
-									className="row w-100"
+									className="row w-100",style={"margin-top":"6%"}
 								),								
                             ],
                             className="page-1n w-100 mt-3",
@@ -285,16 +256,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -364,16 +326,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),
@@ -431,16 +384,7 @@ component = html.Div(
 													],
 													className="pink-item"
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()*3),
-													],
-													className="blue-item"
-												),
+												
 												
 											], className="six columns"
 										),

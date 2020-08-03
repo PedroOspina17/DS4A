@@ -66,7 +66,7 @@ toplotGeneral = d.perCapDptos.groupby("DPNOM")["fetalRatio"].mean().reset_index(
 GeneralFig = make_subplots(rows=1, cols=1,vertical_spacing=0.1)
 
 GeneralFig.append_trace(go.Bar(
-    x= toplotGeneral["fetalRatio"],y =toplotGeneral["DPNOM"],#width=5,
+    x= toplotGeneral["fetalRatio"]*1000,y =toplotGeneral["DPNOM"],#width=5,
     marker=dict(
         color='#03AEA4',
         line=dict(
@@ -102,16 +102,22 @@ GeneralFig.update_layout(
 
 annotations = []
 
-y_s = np.round(toplotGeneral["fetalRatio"]*100, decimals=2)
+
+GeneralFig.update_layout(
+    shapes=[
+        dict(type="line", xref="x", yref="y",
+            x0=12.2, y0=toplotGeneral["DPNOM"].iloc[0], x1=12.2, y1=toplotGeneral["DPNOM"].iloc[-1], line_width=3, line_color="#F8A528"),
+            ])
+
+y_s = np.round(toplotGeneral["fetalRatio"]*1000, decimals=2)
 # y_nw = np.rint(y_net_worth)
 
 # Adding labels
-for yd, xd, pos in zip(y_s, toplotGeneral["DPNOM"],toplotGeneral["fetalRatio"]):
-    
+for xd,pos in zip( toplotGeneral["DPNOM"],y_s):    
     # labeling the bar net worth
     annotations.append(dict(xref='x', yref='y',
-                            y=xd, x=pos + 0.02,
-                            text=str(yd) + '%',
+                            y=xd, x=pos + 10,
+                            text=str(pos),
                             font=dict(family='Arial', size=12,
                                       color='#044D6E'),
                             showarrow=False))

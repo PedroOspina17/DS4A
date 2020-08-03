@@ -82,7 +82,7 @@ filters = dbc.Card(
     [
         dbc.FormGroup(
             [
-                html.Span("Data to show"),
+                dbc.Label("Data to show"),
                 ddlDataToShow
             ]
         ),
@@ -95,7 +95,7 @@ filters = dbc.Card(
         dbc.FormGroup(
             [
                 btnBack
-            ]
+            ],className="mt-5"
         ),
     ],
     body=True,
