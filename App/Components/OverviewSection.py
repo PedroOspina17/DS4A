@@ -426,7 +426,7 @@ component = html.Div(
 														),
 														html.P(".", className="page-2c"),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"10%"}
 												),	
 												html.Div(
 													[
@@ -436,7 +436,7 @@ component = html.Div(
 														),
 														html.P(lorem.paragraph()),
 													],
-													className="blue-item"
+													className="blue-item",style={"margin-top":"10%"}
 												),
 												html.Div(
 													[
@@ -446,7 +446,7 @@ component = html.Div(
 														),
 														html.P(),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"10%"}
 												),
 												
 												
@@ -459,7 +459,7 @@ component = html.Div(
 											className="six columns"
 										),
                                     ],
-									className="row w-100"
+									className="row w-100",style={"margin-top":"5%"}
 								),								
                             ],
                             className="page-1n w-100 mt-3",
@@ -477,25 +477,50 @@ component = html.Div(
                     [
                         getHeader("IMPACT"),
                         html.Div( # JUST TEXT ??:  ToDo
-                            [
-                                html.Div(
-                                    [											
+                            [								
+								html.Div(
+									[											
 										html.Div(
 											[
 												html.H6(
 													"Facilisis mauris parturient, eget vitae",
 													className="page-1h",
 												),
-												html.P(lorem.paragraph()),
 												html.P("adadawd"),
-												html.P(lorem.paragraph()),
 											],
-											className=""
-										),												
-                                    ],
-									className="row w-100"
-								),								
-                            ],
+											className="pink-item",style={"margin-top":"10%"}
+										),
+										html.Div(
+											[
+												html.H6(
+													"Facilisis mauris parturient, eget vitae",
+													className="page-1h",
+												),
+												html.P("."),
+											],
+											className="blue-item",style={"margin-top":"10%"}
+										),
+										html.Div(
+											[
+												html.H6(
+													"Facilisis mauris parturient, eget vitae",
+													className="page-1h",
+												),
+												html.P("adadawd"),
+											],
+											className="pink-item",style={"margin-top":"10%"}
+										),										
+									],
+									className="five columns",style={"margin-top":"3%"}
+								),
+								html.Div(
+									[
+										html.Img(src="assets/LinesVsIncomes.png",style={"width": "100%"}),
+										html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"})
+									],
+									className="seven columns",style={"margin-top":"3%"}
+								),							
+							],
                             className="page-1n w-100 mt-3",
                         ),
                     ],
@@ -843,5 +868,6 @@ component = html.Div(
             ],
             className="page",
         ),
+		
     ]
 )

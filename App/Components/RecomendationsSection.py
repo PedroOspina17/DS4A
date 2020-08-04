@@ -206,12 +206,12 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 5 - SARIMA - 
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Sarima", "Time series analysis."),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -221,42 +221,33 @@ component = html.Div(
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"¡Predicting the future!",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("Based on data from the last 10 years, we were able to predict the number of births for the next 2 years."),
 													],
-													className="pink-item"
+													className="pink-item six columns",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"¿Why this could be useful?",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("This model assumes the world is the same every year, so events such as the COVID-19 pandemic are not expected. In this sense, these predictions serve as a baseline for assessing the effect of the pandemic on this variable."),
 													],
-													className="blue-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
+													className="blue-item six columns",style={"margin-top": "5%"}
 												),
 												
 												
-											], className="six columns"
+												
+											], className="w-100"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/LogitCoeffs.png",style={"width": "100%"})
+												html.Img(src="assets/Sarima.png",style={"width": "100%","margin-top": "5%"})
 											],
-											className="six columns"
+											className="w-100"
 										),
                                     ],
 									className="row w-100"
@@ -270,57 +261,71 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 5 - CONCLUSIONS1- 
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Conclusions", ""),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
                                     [	
 										html.Div(
 											[
-												html.Img(src="assets/Maps.png",style={"width": "94%"})
-											],
-											className="six columns"
-										),
-										html.Div(
-											[
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"????",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("The problem at hand is heavily influenced by geography, and from the results of our models we infer that fetal deaths are systematically not being reported on peripheral and poor regions. There is also a great inequality between ethnicities which deserves a deeper analysis on its own."),
 													],
-													className="pink-item"
+													className="pink-item ",style={"margin-top": "1%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"¿?",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("We showed that the pregnancy is heavily influenced by a number of variables, among which regional characteristics and social security are remarkable for their social implications."),
 													],
-													className="blue-item"
+													className="blue-item ",style={"margin-top": "1%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"¿?",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("More time, domain knowledge and better data for infant deaths is needed in order to enrich this analysis, as well as including some other data like poverty levels, drinking-water access and a more detailed comparison to other countries."),
 													],
-													className="pink-item"
+													className="pink-item ",style={"margin-top": "1%"}
+												),
+												html.Div(
+													[
+														html.H6(
+															"¿?",
+															className="page-1h",
+														),
+														html.P("Future analyses shoud include a chapter about the impact of the COVID-19 pandemic on fetal and infant mortality rates in the country."),
+													],
+													className="blue-item ",style={"margin-top": "1%"}
+												),
+												html.Div(
+													[
+														html.H6(
+															"¿?",
+															className="page-1h",
+														),
+														html.P("On the right hands, this work has the potential to help guide humanitarian initiatives and orient families on how to better take care of their offspring."),
+													],
+													className="pink-item ",style={"margin-top": "1%"}
 												),
 												
 												
-											], className="six columns"
+											], className="w-100"
 										),
                                     ],
 									className="row w-100"
@@ -334,12 +339,12 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 5 - CONCLUSIONS2- 
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Conclusions2?", ""),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -349,42 +354,68 @@ component = html.Div(
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"????",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("The problem at hand is heavily influenced by geography, and from the results of our models we infer that fetal deaths are systematically not being reported on peripheral and poor regions. There is also a great inequality between ethnicities which deserves a deeper analysis on its own."),
 													],
-													className="pink-item"
+													className="pink-item six columns",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"¿?",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("We showed that the pregnancy is heavily influenced by a number of variables, among which regional characteristics and social security are remarkable for their social implications."),
 													],
-													className="blue-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
+													className="blue-item six columns",style={"margin-top": "5%"}
 												),
 												
 												
-											], className="six columns"
+											], className="w-100"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_bott.png",style={"width": "70%"})
-											],
-											className="six columns"
+												
+												html.Div(
+													[
+														html.H6(
+															"¿?",
+															className="page-1h",
+														),
+														html.P("More time, domain knowledge and better data for infant deaths is needed in order to enrich this analysis, as well as including some other data like poverty levels, drinking-water access and a more detailed comparison to other countries."),
+													],
+													className="blue-item six columns",style={"margin-top": "5%"}
+												),
+												html.Div(
+													[
+														html.H6(
+															"¿?",
+															className="page-1h",
+														),
+														html.P("Future analyses shoud include a chapter about the impact of the COVID-19 pandemic on fetal and infant mortality rates in the country."),
+													],
+													className="pink-item six columns",style={"margin-top": "5%"}
+												),
+												
+											], className="w-100"
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.H6(
+															"¿?",
+															className="page-1h",
+														),
+														html.P("On the right hands, this work has the potential to help guide humanitarian initiatives and orient families on how to better take care of their offspring."),
+													],
+													className="pink-item six columns",style={"margin-top": "5%"}
+												),
+												
+												
+											], className="w-100"
 										),
                                     ],
 									className="row w-100"
