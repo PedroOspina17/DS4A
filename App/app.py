@@ -27,7 +27,6 @@ tab1_content = dbc.Card(
 dbc.CardBody(
 	[
        OverviewSection.component
-       
    ]
 ),
 className="mt-3",
@@ -108,7 +107,7 @@ def mapInteraction(year,PlotVariable,click,button,mapPlot,barPlot):
                        zoom=4,
                        mapbox_style="carto-positron", 
                        featureidkey = 'properties.MPIO_CCNCT',
-                       color_continuous_scale="PuRd",
+                       color_continuous_scale="Geyser",
                        center={'lat':4.3,'lon':-73},
                        hover_name='mpio_name',
                        opacity=0.5)
