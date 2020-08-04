@@ -25,17 +25,10 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP]) #USING 
 
 tab1_content = dbc.Card(
 dbc.CardBody(
-<<<<<<< HEAD
-    [
-        OverviewSection.component
-        
-    ]
-=======
-   [
+	[
        OverviewSection.component
        
    ]
->>>>>>> 54ae4dcc145d4bab25e9cfc77d2fcd323a790ca1
 ),
 className="mt-3",
 )
@@ -61,11 +54,7 @@ tab3_content = dbc.Card(
 
 tabs = dbc.Tabs(
     [
-<<<<<<< HEAD
         dbc.Tab(tab1_content, label="Overview"),
-=======
-       dbc.Tab(tab1_content, label="Overview"),
->>>>>>> 54ae4dcc145d4bab25e9cfc77d2fcd323a790ca1
         dbc.Tab(tab2_content, label="Analytics"),
         dbc.Tab(tab3_content, label="Models")
     ],

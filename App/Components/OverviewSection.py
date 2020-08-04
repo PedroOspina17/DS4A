@@ -117,7 +117,7 @@ component = html.Div(
                             [
                                 html.Div(
                                     [                                        
-                                        html.Img(src="assets/testLanding_v2.png",className="landingIMG",)
+                                        html.Img(src="assets/testLanding_v2.jpeg",className="landingIMG",)
                                     ],
                                     className="",
                                 ),
@@ -292,8 +292,8 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6("Stillbirth:",className="subtitle-item"),
-														html.P(["Stillbirth definition"]
+														html.H6("Fetal mortality / Stillbirth:",className="subtitle-item"),
+														html.P(["A stillbirth is the death or loss of a baby before or during delivery. It encompasses any death of a fetus after 20 weeks of gestation or 500 gm."]
 																, className=""
 															),
 													],
@@ -301,8 +301,8 @@ component = html.Div(
 												),
 												html.Div(
 													[
-														html.H6("Neonate:",className="subtitle-item"),
-														html.P(["Neonate definition"]
+														html.H6("Neonate mortality:",className="subtitle-item"),
+														html.P(["Neonatal mortality refers to death of a live-born baby within the first 28 days of life. Early neonatal mortality refers to the death of a live-born baby within the first seven days of life, while late neonatal mortality refers to death after 7 days until before 28 days."]
 																, className=""
 															),
 													],
@@ -314,23 +314,15 @@ component = html.Div(
 										),
 										html.Div(
 											[
+												
 												html.Div(
 													[
-														html.H6("Infant:",className="subtitle-item"),
-														html.P(["Stillbirth definition"]
+														html.H6("Perinatal mortality:",className="subtitle-item"),
+														html.P(["Defined as the number of fetal deaths past 22 (or 28) completed weeks of pregnancy plus the number of deaths among live-born children up to 7 completed days of life."]
 																, className=""
 															),
 													],
-													className="pink-item",style={"margin-top":"5%"}
-												),
-												html.Div(
-													[
-														html.H6("perinatal:",className="subtitle-item"),
-														html.P(["Neonate definition"]
-																, className=""
-															),
-													],
-													className="blue-item",style={"margin-top":"5%"}
+													className="blue-item",style={"margin-top":"5%","height":"88%","padding-top":"12%"}
 												),																						
 											],
 											className="six columns"
@@ -512,7 +504,7 @@ component = html.Div(
             ],
             className="page",
         ),
-        ################## Page 5 - EDA - Basic variables
+        ################## Page 5 - EDA - Basic variables I -- WEIGHT - RESID. AREA
         html.Div(
             [
                 html.Div(
@@ -527,30 +519,33 @@ component = html.Div(
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"Weight",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("We found that many of the infant deaths are related to underweight issues. This is an issue that must be addressed if we want to bring any help on this problem."),
+														html.P("The weights for the fetal deaths are obviously very low, since this fetuses don’t reach their full development."),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top":"10%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"Residence area",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("Though fetal deaths are more likely to happen in cities, infant deaths are more likely to happen on rural than on urban locations."),
 													],
-													className="blue-item"
+													className="blue-item",style={"margin-top":"30%"}
 												),
+												
 												
 												
 											], className="six columns"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_bott.png",style={"width": "70%"})
+												html.Img(src="assets/Weight.png",style={"width": "70%"}),
+												html.Img(src="assets/Race.png",style={"width": "70%"})
 											],
 											className="six columns"
 										),
@@ -566,12 +561,60 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 5 - EDA - Basic variables II. MOTHER'S AGE
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Analysis", "Demographic variables II."),
+                        html.Div( # Color conclusions and graphs:  ToDo
+                            [
+                                html.Div(
+                                    [	
+										html.Div(
+											[
+												html.Div(
+													[
+														html.H6(
+															"Mother's Age",
+															className="page-1h",
+														),
+														html.P("Looking at mother’s age, we found that the probability of a successful birth decreases with the age of the mother, so that older women tend to have lower chances of giving birth."),
+													],
+													className="pink-item",style={"margin-top":"20%"}
+												),
+												html.Div(
+													[
+														html.P("This conclusion also applies to newborns from older moms, their chances of surviving is not as good as that of younger moms (around 25 years old), but the difference is not as striking."),
+													],
+													className="blue-item",style={"margin-top":"15%"}
+												),
+											], className="five columns"
+										),
+										html.Div(
+											[
+												html.Img(src="assets/MothersAge.png",style={"width": "100%"})
+											],
+											className="seven columns"
+										),
+                                    ],
+									className="row w-100"
+								),								
+                            ],
+                            className="page-1n w-100 mt-3",
+                        ),
+                    ],
+                    className="subpage",
+                )
+            ],
+            className="page",
+        ),
+		################## Page 6 - EDA - Basic variables III. PARENTS AGE DIST
+        html.Div(
+            [
+                html.Div(
+                    [
+                        getHeader("Analysis", "Demographic variables III."),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -579,46 +622,37 @@ component = html.Div(
 										
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_top.png",style={"width": "48%"})
-											],
-											className="six columns"
+												html.Div(
+													[
+														html.H6(
+															"Mother's age",
+															className="page-1h",
+														),
+														html.P("Though the influence of the father was not assessed on this work, an interesting trend was found: fathers tend to (and can) be older, while mothers are tightly concentrated between 20 and 30 years old."),
+													],
+													className="pink-item six columns"
+												),
+												html.Div(
+													[
+														html.H6(
+															"¿Public healt issue?",
+															className="page-1h",
+														),
+														html.P("An issue is spotted here, we have way too many mothers below 20 years old. Future work should focus on the influence this variable has on pregnancy."),
+													],
+													className="blue-item six columns",
+													# style = {"margin-top": "26%"}
+												),
+												
+												
+												
+											], className="",style={"margin-top": "5%"}
 										),
 										html.Div(
 											[
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="blue-item",
-													style = {"margin-top": "26%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
-												
-												
-											], className="six columns"
+												html.Img(src="assets/ParentsAgeDist.png",style={"width": "60%","margin-top": "5%", "margin-left": "21%"})
+											],
+											className=""
 										),
                                     ],
 									className="row w-100"
@@ -632,12 +666,12 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 7 - EDA - Basic variables IV - Race - cultural, Residence area
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Analysis", "Demographic variables IV."),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -647,45 +681,94 @@ component = html.Div(
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"Race / Cultural identification",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("While exploring the racial and cultural identification of the baby, we found that these categories behave very differently in terms of infant mortality."),														
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top": "15%"}
 												),
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"Residence area",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("We found that indigenous, rom, and raizal people are more likely to have infant deaths than other races, while ‘None’ was found to have the lowest rate. This may suggest a heavy racial/cultural discrimination within the country or be a consequence of different habits among cultures."),
 													],
-													className="blue-item"
+													className="blue-item",style={"margin-top": "15%"}
 												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
+												
 												
 												
 											], className="six columns"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/LogitCoeffs.png",style={"width": "100%"})
+												html.Img(src="assets/fig5_mod.png",style={"width": "100%"})
 											],
 											className="six columns"
 										),
                                     ],
-									className="row w-100"
+									className="row w-100",style={"margin-top": "3%"}
+								),								
+                            ],
+                            className="page-1n w-100 mt-3"
+                        ),
+                    ],
+                    className="subpage",
+                )
+            ],
+            className="page",
+        ),
+		################## Page 5 - EDA - - Basic variables V - Death time and proba by time
+        html.Div(
+            [
+                html.Div(
+                    [
+                        getHeader("Analysis", "Demographic variables V."),
+                        html.Div( # Color conclusions and graphs:  ToDo
+                            [
+                                html.Div(
+                                    [	
+										html.Div(
+											[
+												html.Div(
+													[
+														html.H6(
+															"Neonate's death probability base on time",
+															className="page-1h",
+														),
+														html.P("A death is most likely to occur in the first moments of life, and this likelihood decays very rapidly as the age increases."),
+														html.P("We should take special care of our children as they grow up, but the first week and half year are the most important times!"),
+													],
+													className="pink-item six columns"
+												),
+												html.Div(
+													[
+														html.H6(
+															"Neonate's deaths time",
+															className="page-1h",
+														),
+														html.P("If we ask ourselves: at what age do the newborns die (if they do)? We found that most of the deaths occur between 1-5 months, and 1-6 days."),
+													],
+													className="blue-item six columns"
+												),
+												
+																								
+												
+											]
+										),
+										html.Div(
+											[
+												html.Img(src="assets/deathProb.png", className="six columns",style={"width": "30%","margin-top": "2%","margin-left": "10%"}),
+												html.Img(src="assets/AgeRange.png", className="six columns",style={"width": "32%","margin-top": "2%","margin-left": "20%"}),
+												
+											],
+											className="w-100"
+										),
+                                    ],
+									className="row w-100",style={"margin-top": "3%"}
 								),								
                             ],
                             className="page-1n w-100 mt-3",
@@ -696,76 +779,12 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - EDA - Basic variables
+		################## Page 5 - EDA - Basic variables VI - Colombian maps
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
-                        html.Div( # Color conclusions and graphs:  ToDo
-                            [
-                                html.Div(
-                                    [	
-										html.Div(
-											[
-												html.Img(src="assets/Maps.png",style={"width": "94%"})
-											],
-											className="six columns"
-										),
-										html.Div(
-											[
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="blue-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="pink-item"
-												),
-												
-												
-											], className="six columns"
-										),
-                                    ],
-									className="row w-100"
-								),								
-                            ],
-                            className="page-1n w-100 mt-3",
-                        ),
-                    ],
-                    className="subpage",
-                )
-            ],
-            className="page",
-        ),
-		################## Page 5 - EDA - Basic variables
-        html.Div(
-            [
-                html.Div(
-                    [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Analysis", "Demographic variables VI."),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -778,9 +797,9 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P(""),
 													],
-													className="pink-item"
+													className="pink-item",style={"margin-top": "10%"}
 												),
 												html.Div(
 													[
@@ -788,9 +807,9 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("."),
 													],
-													className="blue-item"
+													className="blue-item",style={"margin-top": "10%"}
 												),
 												html.Div(
 													[
@@ -798,28 +817,19 @@ component = html.Div(
 															"Facilisis mauris parturient, eget vitae",
 															className="page-1h",
 														),
-														html.P(lorem.paragraph()),
+														html.P("."),
 													],
-													className="pink-item"
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="blue-item"
+													className="pink-item",style={"margin-top": "10%"}
 												),
 												
-											], className="six columns"
+												
+											], className="eight columns"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/fig1_col_bott.png",style={"width": "70%"})
+												html.Img(src="assets/fetal_nonfetal_vertical.png",style={"width": "60%"})
 											],
-											className="six columns"
+											className="four columns"
 										),
                                     ],
 									className="row w-100"

@@ -74,21 +74,13 @@ component = html.Div(
                         getHeader("¿How can we model fetal mortality in colombia?",headerTitleStyles = {"margin-left": "-160px","margin-top": "-10px"}),
                         html.Div( # JUST TEXT ??:  ToDo
                             [
-                                # html.Div(
-                                #     [											
-								# 		html.Div(
-								# 			[
-												# html.H4(
-												# 	"¿How can we model fetal mortality in colombia?",
-												# 	className="page-1h",
-												# ),
-												html.P("The following models presented have the objective of knowing the forecast and probabilities that the result of the gestation process will be successful or not. "),
-												html.P("These models are the result of the combination of 5 features of the pregnancy process and the environment where it develops. "),
-												html.P("These characteristics are:"),
 												html.Div(
 													[
 														html.Div(
 															[
+																html.P("The following models presented have the objective of knowing the forecast and probabilities that the result of the gestation process will be successful or not. ",style={"margin-top": "5%"}),
+																html.P(["These models are the result of the combination of ",html.Span("5 features",className="important-yellow")," of the pregnancy process and the environment where it develops. "]),
+																html.P("These characteristics are:"),
 																html.Ul(
 																	[
 																		html.Li(" Number of pregnancies the mother has previously had."),
@@ -97,16 +89,16 @@ component = html.Div(
 																		html.Li(" Department where the mother lives"),
 																		html.Li(" Conditions of the mother's place of residence."),
 																		html.Li(" Mother's education level.")
-																	],className="coloredList"
+																	],className="coloredList",style={"margin-top": "5%"}
 																)
-															], className="five columns"
+															], className="seven columns"
 														),
 														html.Div(
 															[
-																html.Img(src="assets/ModelFeaturesPresentation.png",style={"width": "100%"}),
-															], className="seven columns"
+																html.Img(src="assets/ModelFeaturesPresentation.png",style={"width": "105%"}),
+															], className="four columns"
 														)
-													],className="mt-lg-5"
+													],className="mt-lg-3"
 												)
 										# 	],
 										# 	className=""
