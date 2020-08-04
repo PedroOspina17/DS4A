@@ -147,9 +147,10 @@ def mapInteraction(year,PlotVariable,click,button,mapPlot,barPlot):
 
     #If back button is pressed, then reset the map
     elif ctx.triggered[0]['prop_id'] == 'backButt.n_clicks':
-        dptoMap = True   #We're back to full Colombia
-
-        region = 'Colombia'
+        #Reset all of the global variables of this callback
+        currDptoData = 0     #Variable to hold data for only one dpto so query is faster when changing years. 
+        dptoMap = True       #Tell if we're currently at a full Colombia map
+        region = 'Colombia'  #Variable to hold region name (be it Colombia or a specific dpto)
         Title = "{0} in {1}, year {2}".format(titleNamesDict[PlotVariable],region,year)  
 
         return (AnalyticsSection.mainMap,Title,AnalyticsSection.sideBars)
