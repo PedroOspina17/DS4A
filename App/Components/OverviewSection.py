@@ -534,7 +534,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables I."),
+                        getHeader("Analysis", "Demographic variables I.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -591,7 +591,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables II."),
+                        getHeader("Analysis", "Demographic variables II.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -639,7 +639,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables III."),
+                        getHeader("Analysis", "Demographic variables III.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -696,7 +696,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables IV."),
+                        getHeader("Analysis", "Demographic variables IV.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -751,7 +751,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables V."),
+                        getHeader("Analysis", "Demographic variables V.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -809,7 +809,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Analysis", "Demographic variables VI."),
+                        getHeader("Analysis", "Demographic variables VI.",{"margin-left": "-70px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -818,31 +818,23 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(""),
+														
+														html.P("Regarding to the geographical information, different behaviours are expected from different departments given the great economic and cultural differences that exist between them."),
+														html.P("Here it is possible to observe those differences reflected in the ratios for fetal and non fetal deaths per department."),
 													],
-													className="pink-item",style={"margin-top": "10%"}
+													className="pink-item",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P("."),
+														
+														html.P("Rural departments located on the peripheries, show a dramatic non-fetal death rate as compared to the central, more urban departments. Fetal deaths reports, on the other hand, seems to be mainly located in the central regions."),
 													],
 													className="blue-item",style={"margin-top": "10%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P("."),
+														
+														html.P("The different behaviour between the fetal and non fetal reports could be explained accounting for people being obligated to report a non-fetal death since, legally, this corresponds already to a person, while fetal deaths can more easily be unreported, especially in rural areas."),
 													],
 													className="pink-item",style={"margin-top": "10%"}
 												),
