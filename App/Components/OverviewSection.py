@@ -216,7 +216,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Angélica Rincon",className="page-1h font-weight-bold"),
-														html.Span("Aathematician",className="d-block font-weight-bold"),
+														html.Span("Mathematician",className="d-block font-weight-bold"),
 														html.Span("barincon23@gmail.com",className="d-block"),
 														html.A("LinkedIn",href="www.linkedin.com/in/angelicarincona",className="linkedin d-block"),
 													],
@@ -315,8 +315,8 @@ component = html.Div(
 										html.Div(
 											[
 												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
-												html.Img(src="assets/MAPA-01.jpg",style={"width": "84%","margin-left":"8%","margin-top":"5%"}),												
-												html.Img(src="assets/LinesVsRegions.png",style={"width": "95%"}),
+												html.Img(src="assets/MAPA-01.jpg",style={"width": "60%","margin-left":"8%","margin-top":"5%"}),												
+												html.Img(src="assets/LinesVsRegions.png",style={"width": "70%","margin-top":"5%"}),
 											],
 											className="six columns"
 										),
@@ -363,7 +363,7 @@ component = html.Div(
 											className="six columns"
 										),
                                     ],
-									className="row w-100",style={"margin-top":"5%"}
+									className="row w-100"
 								),								
                             ],
                             className="page-1n w-100 mt-3",
