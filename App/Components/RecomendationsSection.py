@@ -71,7 +71,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("PREDICTING A PREGNANCY OUTCOME",headerTitleStyles = {"margin-left": "-160px","margin-top": "-10px"}),
+                        getHeader("Predicting a pregnancy outcome"),
                         html.Div( # JUST TEXT ??:  ToDo
                             [
 												html.Div(
@@ -120,7 +120,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Logistic regression",headerTitleStyles = {"margin-left": "-34%","margin-top": "5%"}),
+                        getHeader("Logistic regression"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -164,7 +164,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Random forest",headerTitleStyles = {"margin-left": "-34%","margin-top": "5%"}),
+                        getHeader("Random forest"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -266,7 +266,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Conclusions2?", ""),
+                        getHeader("Conclusions"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -376,7 +376,7 @@ component = html.Div(
 												),
 												html.Div(
 													[
-														html.H4("Zachary H. Moore",className="impotant-Blue",),
+														html.H4("Zachary Hervieux-Moore",className="impotant-Blue",),
 														html.P("Teacher Assistant - Mentor",className="impotant-yellow",),
 														html.A("LinkedIn",href="https://www.linkedin.com/in/zacharyhervieuxmoore/",className="linkedin d-block"),
 													],
@@ -386,17 +386,33 @@ component = html.Div(
 												
 											], className="w-100"
 										),
+
 										html.Div(
 											[
+												html.Div(
+													[
+														html.H4("Correlation one",className="impotant-Blue",),
+														html.P("Partner",className="impotant-yellow",),
+														html.A("WebPage",href="https://www.correlation-one.com/",className="linkedin d-block"),
+													],
+													className="pink-item six columns",style={"margin-top": "5%"}
+												),
+												html.Div(
+													[
+														html.H4("MINTIC",className="impotant-Blue",),
+														html.P("Sponsor",className="impotant-yellow",),
+														html.A("WebPage",href="https://mintic.gov.co/portal/inicio/Sala-de-Prensa/Noticias/116233:El-talento-en-ciencia-de-datos-que-estamos-generando-brindara-oportunidades-a-todos-los-sectores-MinTIC",className="linkedin d-block"),
+													],
+													className="blue-item six columns",style={"margin-top": "5%"}
+												),
 												
-												html.Img(src="assets/ds4aCol.png",style={"width": "100%","margin-top": "5%"},className="six colums"),
-												html.Img(src="assets/Mintic.png",style={"width": "100%","margin-top": "5%"},className="six colums")
 												
 											], className="w-100"
 										),
+										
                                     ],
 									className="row w-100", style={"padding-left":"20%"}
-								),								
+								),					
                             ],
                             className="page-1n w-100 mt-3",
                         ),

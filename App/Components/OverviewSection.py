@@ -315,7 +315,7 @@ component = html.Div(
 										html.Div(
 											[
 												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
-												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "91%","margin-left":"8%","margin-top":"5%"}),
+												html.Img(src="assets/MortalityByContinent.png",style={"width": "91%","margin-left":"8%","margin-top":"5%"}),
 												html.Img(src="assets/LineLegends.png",style={"width": "35%","margin-left":"65%","margin-top":"8%"}),
 												html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"}),
 											],
@@ -351,7 +351,7 @@ component = html.Div(
 															"Surprising fact",
 															className="page-1h",
 														),
-														html.P("In terms of infant mortality, Colombia does considerably better than some regions such as Sub-Saharan Africa  and the world overall, and slightly better than Latin America & Caribbean. However it does worse compared to North America and the Americas in general. All regions  have a decreasing tendency over the years."),
+														html.P("Every year, there are more baby boys than girls born around the world. But there are also more infant deaths of boys, with this last fact not completely explained by the difference in births."),
 													],
 													className="pink-item",style={"margin-top":"10%"}
 												),	
