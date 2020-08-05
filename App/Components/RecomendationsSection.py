@@ -71,7 +71,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("¿How can we model fetal mortality in colombia?",headerTitleStyles = {"margin-left": "-160px","margin-top": "-10px"}),
+                        getHeader("PREDICTING A PREGNANCY OUTCOME",headerTitleStyles = {"margin-left": "-160px","margin-top": "-10px"}),
                         html.Div( # JUST TEXT ??:  ToDo
                             [
 												html.Div(
@@ -79,7 +79,7 @@ component = html.Div(
 														html.Div(
 															[
 																html.P("The following models presented have the objective of knowing the forecast and probabilities that the result of the gestation process will be successful or not. ",style={"margin-top": "5%"}),
-																html.P(["These models are the result of the combination of ",html.Span("5 features",className="important-yellow")," of the pregnancy process and the environment where it develops. "]),
+																html.P(["These models are the result of the combination of ",html.Span("6 features",className="important-yellow")," of the pregnancy process and the environment where it develops. "]),
 																html.P("These characteristics are:"),
 																html.Ul(
 																	[
@@ -261,12 +261,12 @@ component = html.Div(
             ],
             className="page",
         ),
-		################## Page 5 - CONCLUSIONS1- 
+		################## Page 5 - CONCLUSIONS2- 
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Conclusions", ""),
+                        getHeader("Conclusions2?", ""),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -275,53 +275,45 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6(
-															"????",
-															className="page-1h",
-														),
 														html.P("The problem at hand is heavily influenced by geography, and from the results of our models we infer that fetal deaths are systematically not being reported on peripheral and poor regions. There is also a great inequality between ethnicities which deserves a deeper analysis on its own."),
 													],
-													className="pink-item ",style={"margin-top": "1%"}
+													className="pink-item six columns",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
 														html.P("We showed that the pregnancy is heavily influenced by a number of variables, among which regional characteristics and social security are remarkable for their social implications."),
 													],
-													className="blue-item ",style={"margin-top": "1%"}
+													className="blue-item six columns",style={"margin-top": "5%"}
 												),
+												
+												
+											], className="w-100"
+										),
+										html.Div(
+											[
+												
 												html.Div(
 													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
 														html.P("More time, domain knowledge and better data for infant deaths is needed in order to enrich this analysis, as well as including some other data like poverty levels, drinking-water access and a more detailed comparison to other countries."),
 													],
-													className="pink-item ",style={"margin-top": "1%"}
+													className="blue-item six columns",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
 														html.P("Future analyses shoud include a chapter about the impact of the COVID-19 pandemic on fetal and infant mortality rates in the country."),
 													],
-													className="blue-item ",style={"margin-top": "1%"}
+													className="pink-item six columns",style={"margin-top": "5%"}
 												),
+												
+											], className="w-100"
+										),
+										html.Div(
+											[
 												html.Div(
-													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
+													[														
 														html.P("On the right hands, this work has the potential to help guide humanitarian initiatives and orient families on how to better take care of their offspring."),
 													],
-													className="pink-item ",style={"margin-top": "1%"}
+													className="pink-item six columns",style={"margin-top": "5%"}
 												),
 												
 												
@@ -339,12 +331,13 @@ component = html.Div(
             ],
             className="page",
         ),
+
 		################## Page 5 - CONCLUSIONS2- 
         html.Div(
             [
                 html.Div(
                     [
-                        getHeader("Conclusions2?", ""),
+                        getHeader("¡THANKS!"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -353,21 +346,39 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.H6(
-															"????",
-															className="page-1h",
-														),
-														html.P("The problem at hand is heavily influenced by geography, and from the results of our models we infer that fetal deaths are systematically not being reported on peripheral and poor regions. There is also a great inequality between ethnicities which deserves a deeper analysis on its own."),
+														html.H4("Lina M. Rincon",className="impotant-Blue",),
+														html.P("Designer",className="impotant-yellow",),
+														html.A("Behance",href="https://www.behance.net/linarincon",className="linkedin d-block"),
+														html.A("LinkedIn",href="https://co.linkedin.com/in/lina-marcela-rincón-aguilera-29566886",className="linkedin d-block"),
 													],
 													className="pink-item six columns",style={"margin-top": "5%"}
 												),
 												html.Div(
 													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
-														html.P("We showed that the pregnancy is heavily influenced by a number of variables, among which regional characteristics and social security are remarkable for their social implications."),
+														html.H4("Natesh Pillai",className="impotant-Blue",),
+														html.P("Program teacher",className="impotant-yellow",),
+														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
+													],
+													className="blue-item six columns",style={"margin-top": "5%"}
+												),
+
+											], className="w-100"
+										),
+										html.Div(
+											[
+												html.Div(
+													[
+														html.H4("Ana Lopez",className="impotant-Blue",),
+														html.P("Teacher Assistant - Mentor",className="impotant-yellow",),
+														html.A("LinkedIn",href="https://www.linkedin.com/in/amlopez81/",className="linkedin d-block"),
+													],
+													className="pink-item six columns",style={"margin-top": "5%"}
+												),
+												html.Div(
+													[
+														html.H4("Zachary H. Moore",className="impotant-Blue",),
+														html.P("Teacher Assistant - Mentor",className="impotant-yellow",),
+														html.A("LinkedIn",href="https://www.linkedin.com/in/zacharyhervieuxmoore/",className="linkedin d-block"),
 													],
 													className="blue-item six columns",style={"margin-top": "5%"}
 												),
@@ -378,47 +389,13 @@ component = html.Div(
 										html.Div(
 											[
 												
-												html.Div(
-													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
-														html.P("More time, domain knowledge and better data for infant deaths is needed in order to enrich this analysis, as well as including some other data like poverty levels, drinking-water access and a more detailed comparison to other countries."),
-													],
-													className="blue-item six columns",style={"margin-top": "5%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
-														html.P("Future analyses shoud include a chapter about the impact of the COVID-19 pandemic on fetal and infant mortality rates in the country."),
-													],
-													className="pink-item six columns",style={"margin-top": "5%"}
-												),
-												
-											], className="w-100"
-										),
-										html.Div(
-											[
-												html.Div(
-													[
-														html.H6(
-															"¿?",
-															className="page-1h",
-														),
-														html.P("On the right hands, this work has the potential to help guide humanitarian initiatives and orient families on how to better take care of their offspring."),
-													],
-													className="pink-item six columns",style={"margin-top": "5%"}
-												),
-												
+												html.Img(src="assets/ds4aCol.png",style={"width": "100%","margin-top": "5%"},className="six colums"),
+												html.Img(src="assets/Mintic.png",style={"width": "100%","margin-top": "5%"},className="six colums")
 												
 											], className="w-100"
 										),
                                     ],
-									className="row w-100"
+									className="row w-100", style={"padding-left":"20%"}
 								),								
                             ],
                             className="page-1n w-100 mt-3",

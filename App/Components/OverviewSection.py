@@ -87,7 +87,7 @@ component = html.Div(
                                                     [
                                                         
                                                         html.H1("BORN AI", className="greenTitle"),
-                                                        html.H4("Analyzing borns in colombia."),
+                                                        html.H4("Analyzing borns in Colombia."),
                                                     ],
                                                     className="page-1b",
                                                 ),
@@ -117,7 +117,7 @@ component = html.Div(
                             [
                                 html.Div(
                                     [                                        
-                                        html.Img(src="assets/testLanding_v2.jpeg",className="landingIMG",)
+                                        html.Img(src="assets/testLanding_v4.jpg",className="landingIMG",)
                                     ],
                                     className="",
                                 ),
@@ -151,9 +151,10 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Pedro N. Ospina",className="page-1h font-weight-bold"),
-														html.Span("Ing. Sistemas",className="d-block font-weight-bold"),
-														html.Span("300-242-9195",className="d-block"),
+														html.Span("Ing. Sistemas",className="d-block font-weight-bold"),														
 														html.Span("pedroospina17@gmail.com",className="d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
+														
 													],
 													className="blue-item columns eight",
 												),
@@ -172,8 +173,8 @@ component = html.Div(
 													[
 														html.H4("Melissa Aguilar",className="page-1h font-weight-bold"),
 														html.Span("Ing. Física",className="d-block font-weight-bold"),
-														html.Span("913-823-9541",className="d-block"),
 														html.Span("melaguilarza@gmail.com",className="d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
 													],
 													className="pink-item columns eight",
 												),
@@ -192,8 +193,8 @@ component = html.Div(
 													[
 														html.H4("Andres C. Marulanda",className="page-1h font-weight-bold"),
 														html.Span("Químico",className="d-block font-weight-bold"),
-														html.Span("913-823-9541",className="d-block"),
 														html.Span("acamilo.marulanda@udea.edu.co",className="d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
 													],
 													className="blue-item columns eight",
 												),
@@ -216,8 +217,8 @@ component = html.Div(
 													[
 														html.H4("Angélica Rincon",className="page-1h font-weight-bold"),
 														html.Span("Matemática",className="d-block font-weight-bold"),
-														html.Span("913-823-9541",className="d-block"),
 														html.Span("barincon23@gmail.com",className="d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/angelicarincona",className="linkedin d-block"),
 													],
 													className="pink-item columns eight",
 												),
@@ -237,8 +238,8 @@ component = html.Div(
 
 														html.H4("Santiago Morales",className="page-1h font-weight-bold"),
 														html.Span("Físico",className="d-block font-weight-bold"),
-														html.Span("913-823-9541",className="d-block"),
-														html.Span("santiagomoralessaldarriaga@gmail.com",className="d-block"),
+														html.Span("santiagomoralessaldarriaga@gmail.com",className="d-block",style={"font-size": "16pt"}),
+														html.A("LinkedIn",href="www.linkedin.com/in/santiago-morales-0ab79b196/",className="linkedin d-block"),
 													],
 													className="blue-item columns eight",
 												),
@@ -257,8 +258,8 @@ component = html.Div(
 													[
 														html.H4("Jenny Lancheros",className="page-1h font-weight-bold"),
 														html.Span("Admistradora - Estadistica",className="d-block font-weight-bold"),
-														html.Span("913-823-9541",className="d-block"),
 														html.Span("jlanch14@hotmail.com",className="d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
 													],
 													className="pink-item columns eight",
 												),
@@ -278,73 +279,7 @@ component = html.Div(
             ],
             className="page",
         ),
-        #################################################### Page 2 --- OVERVIEW - GLOBAL
-        html.Div(
-            [
-                html.Div(
-                    [
-                        getHeader("CONTEXT","Definitions"),
-                        html.Div( # Color conclusions and graphs:  ToDo
-                            [
-                                html.Div(
-                                    [	
-										html.Div(
-											[
-												html.Div(
-													[
-														html.H6("Fetal mortality / Stillbirth:",className="subtitle-item"),
-														html.P(["A stillbirth is the death or loss of a baby before or during delivery. It encompasses any death of a fetus after 20 weeks of gestation or 500 gm."]
-																, className=""
-															),
-													],
-													className="pink-item",style={"margin-top":"5%"}
-												),
-												html.Div(
-													[
-														html.H6("Neonate mortality:",className="subtitle-item"),
-														html.P(["Neonatal mortality refers to death of a live-born baby within the first 28 days of life. Early neonatal mortality refers to the death of a live-born baby within the first seven days of life, while late neonatal mortality refers to death after 7 days until before 28 days."]
-																, className=""
-															),
-													],
-													className="blue-item",style={"margin-top":"5%"}
-												),
-												
-												
-											], className="six columns"
-										),
-										html.Div(
-											[
-												
-												html.Div(
-													[
-														html.H6("Perinatal mortality:",className="subtitle-item"),
-														html.P(["Defined as the number of fetal deaths past 22 (or 28) completed weeks of pregnancy plus the number of deaths among live-born children up to 7 completed days of life."]
-																, className=""
-															),
-													],
-													className="blue-item",style={"margin-top":"5%","height":"88%","padding-top":"12%"}
-												),																						
-											],
-											className="six columns"
-										),
-										html.Div(
-											[
-												html.Img(src="assets/BabyTimes.png",style={"width": "90%","margin-left":"10%","margin-top":"2%"})												
-											],
-											className="ten columns"
-										)
-                                    ],
-									className="row w-100"
-								),								
-                            ],
-                            className="page-1n w-100",
-                        ),
-                    ],
-                    className="subpage",
-                )
-            ],
-            className="page",
-        ),		
+        
 		#################################################### Page 2 --- OVERVIEW - GLOBAL
         html.Div(
             [
@@ -359,7 +294,7 @@ component = html.Div(
 											[
 												html.Div(
 													[
-														html.P(["As of 2011, The World Health Organization (WHO for its acronym) estimates that about ",html.Span("4 million",className="important-yellow"), " neonates die every year, and nearly 41% of all under-five child deaths are among newborn infants and specially babies in their first 28 days of life (neonates) [1]."]
+														html.P(["In terms of infant mortality, Colombia does considerably better than some regions such as Sub-Saharan Africa  and the world overall, and slightly better than Latin America & Caribbean. However it does worse compared to North America and the Americas in general. All regions  have a decreasing tendency over the years."]
 																, className="page-2b"
 															),
 													],
@@ -367,21 +302,12 @@ component = html.Div(
 												),
 												html.Div(
 													[
-														html.P(" ."
+														html.P("In terms of fetal mortality these numbers are not available and measurements change between countries."
 																, className="page-2c"
 															),
 													],
 													className="blue-item",style={"margin-top":"10%"}
-												),
-
-												html.Div(
-													[
-														html.P([html.Span("BOY DIE MORE THAN GIRLS ?",className="important-blue"),".... Some useful dates... Numbers: ",html.Span("28.9",className="important-pink")," for every 1000 births",""]
-																, className="page-2c"
-															),
-													],
-													className="pink-item",style={"margin-top":"10%"}
-												),
+												),												
 																							
 												
 											], className="six columns"
@@ -389,8 +315,9 @@ component = html.Div(
 										html.Div(
 											[
 												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
-												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "70%"}),
-												html.Img(src="assets/AmericasNumbers.png",style={"width": "100%"})
+												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "91%","margin-left":"8%"}),
+												html.Img(src="assets/LineLegends.png",style={"width": "100%","margin-left":"8%"}),
+												html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"}),
 											],
 											className="six columns"
 										),
@@ -411,7 +338,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("OVERVIEW", "Taking a look at Colombia's situation.",{"margin-left": "-130px"}),
+                        getHeader("OVERVIEW"),#,{"margin-left": "-130px"}),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
@@ -421,40 +348,19 @@ component = html.Div(
 												html.Div(
 													[
 														html.H6(
-															"Facilisis mauris parturient, eget vitae",
+															"Surprising fact",
 															className="page-1h",
 														),
-														html.P(".", className="page-2c"),
+														html.P("In terms of infant mortality, Colombia does considerably better than some regions such as Sub-Saharan Africa  and the world overall, and slightly better than Latin America & Caribbean. However it does worse compared to North America and the Americas in general. All regions  have a decreasing tendency over the years."),
 													],
 													className="pink-item",style={"margin-top":"10%"}
 												),	
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(lorem.paragraph()),
-													],
-													className="blue-item",style={"margin-top":"10%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"Facilisis mauris parturient, eget vitae",
-															className="page-1h",
-														),
-														html.P(),
-													],
-													className="pink-item",style={"margin-top":"10%"}
-												),
-												
-												
 											], className="six columns"
 										),
 										html.Div(
 											[
-												dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars2',style={"height":"500px"}),
+												html.Img(src="assets/MortalityBySex.png",style={"width": "100%"}),
+												
 											],
 											className="six columns"
 										),
@@ -469,66 +375,7 @@ component = html.Div(
                 )
             ],
             className="page",
-        ),
-		################## Page 4 - IMPACT
-        html.Div(
-            [
-                html.Div(
-                    [
-                        getHeader("IMPACT"),
-                        html.Div( # JUST TEXT ??:  ToDo
-                            [								
-								html.Div(
-									[											
-										html.Div(
-											[
-												html.H6(
-													"Facilisis mauris parturient, eget vitae",
-													className="page-1h",
-												),
-												html.P("adadawd"),
-											],
-											className="pink-item",style={"margin-top":"10%"}
-										),
-										html.Div(
-											[
-												html.H6(
-													"Facilisis mauris parturient, eget vitae",
-													className="page-1h",
-												),
-												html.P("."),
-											],
-											className="blue-item",style={"margin-top":"10%"}
-										),
-										html.Div(
-											[
-												html.H6(
-													"Facilisis mauris parturient, eget vitae",
-													className="page-1h",
-												),
-												html.P("adadawd"),
-											],
-											className="pink-item",style={"margin-top":"10%"}
-										),										
-									],
-									className="five columns",style={"margin-top":"3%"}
-								),
-								html.Div(
-									[
-										html.Img(src="assets/LinesVsIncomes.png",style={"width": "100%"}),
-										html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"})
-									],
-									className="seven columns",style={"margin-top":"3%"}
-								),							
-							],
-                            className="page-1n w-100 mt-3",
-                        ),
-                    ],
-                    className="subpage",
-                )
-            ],
-            className="page",
-        ),
+        ),		
         ################## Page 5 - EDA - Basic variables I -- WEIGHT - RESID. AREA
         html.Div(
             [
@@ -860,6 +707,7 @@ component = html.Div(
             ],
             className="page",
         ),
+		
 		
     ]
 )
