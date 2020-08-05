@@ -151,7 +151,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Pedro N. Ospina",className="page-1h font-weight-bold"),
-														html.Span("Ing. Sistemas",className="d-block font-weight-bold"),														
+														html.Span("System Engineer",className="d-block font-weight-bold"),														
 														html.Span("pedroospina17@gmail.com",className="d-block"),
 														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
 														
@@ -172,7 +172,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Melissa Aguilar",className="page-1h font-weight-bold"),
-														html.Span("Ing. Física",className="d-block font-weight-bold"),
+														html.Span("Physicist Engineer",className="d-block font-weight-bold"),
 														html.Span("melaguilarza@gmail.com",className="d-block"),
 														html.A("LinkedIn",href="www.linkedin.com/in/melissa-aguilar-z",className="linkedin d-block"),
 													],
@@ -192,7 +192,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Andres C. Marulanda",className="page-1h font-weight-bold"),
-														html.Span("Químico",className="d-block font-weight-bold"),
+														html.Span("Chemist",className="d-block font-weight-bold"),
 														html.Span("acamilo.marulanda@udea.edu.co",className="d-block"),
 														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
 													],
@@ -216,7 +216,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Angélica Rincon",className="page-1h font-weight-bold"),
-														html.Span("Matemática",className="d-block font-weight-bold"),
+														html.Span("Aathematician",className="d-block font-weight-bold"),
 														html.Span("barincon23@gmail.com",className="d-block"),
 														html.A("LinkedIn",href="www.linkedin.com/in/angelicarincona",className="linkedin d-block"),
 													],
@@ -237,7 +237,7 @@ component = html.Div(
 													[
 
 														html.H4("Santiago Morales",className="page-1h font-weight-bold"),
-														html.Span("Físico",className="d-block font-weight-bold"),
+														html.Span("Physicist",className="d-block font-weight-bold"),
 														html.Span("santiagomoralessaldarriaga@gmail.com",className="d-block",style={"font-size": "16pt"}),
 														html.A("LinkedIn",href="www.linkedin.com/in/santiago-morales-0ab79b196/",className="linkedin d-block"),
 													],
@@ -257,7 +257,7 @@ component = html.Div(
 												html.Div(
 													[
 														html.H4("Jenny Lancheros",className="page-1h font-weight-bold"),
-														html.Span("Admistradora - Estadistica",className="d-block font-weight-bold"),
+														html.Span("Business Administration - Statistician",className="d-block font-weight-bold"),
 														html.Span("jlanch14@hotmail.com",className="d-block"),
 														html.A("LinkedIn",href="https://www.linkedin.com/in/andrescmb/",className="linkedin d-block"),
 													],
