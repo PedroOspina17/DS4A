@@ -298,7 +298,7 @@ component = html.Div(
 																, className="page-2b"
 															),
 													],
-													className="pink-item",style={"margin-top":"10%"}
+													className="pink-item",style={"margin-top":"15%"}
 												),
 												html.Div(
 													[
@@ -306,7 +306,7 @@ component = html.Div(
 																, className="page-2c"
 															),
 													],
-													className="blue-item",style={"margin-top":"10%"}
+													className="blue-item",style={"margin-top":"40%"}
 												),												
 																							
 												
@@ -315,8 +315,8 @@ component = html.Div(
 										html.Div(
 											[
 												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
-												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "91%","margin-left":"8%"}),
-												html.Img(src="assets/LineLegends.png",style={"width": "100%","margin-left":"8%"}),
+												html.Img(src="assets/InfantMortalityNumbers.png",style={"width": "91%","margin-left":"8%","margin-top":"5%"}),
+												html.Img(src="assets/LineLegends.png",style={"width": "35%","margin-left":"65%","margin-top":"8%"}),
 												html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"}),
 											],
 											className="six columns"
@@ -416,8 +416,8 @@ component = html.Div(
 										),
 										html.Div(
 											[
-												html.Img(src="assets/Weight.png",style={"width": "70%"}),
-												html.Img(src="assets/Race.png",style={"width": "70%"})
+												html.Img(src="assets/Weight.png",style={"width": "70%","margin-top": "5%"}),
+												html.Img(src="assets/Race.png",style={"width": "70%","margin-top": "5%"}),
 											],
 											className="six columns"
 										),
@@ -558,17 +558,7 @@ component = html.Div(
 														),
 														html.P("While exploring the racial and cultural identification of the baby, we found that these categories behave very differently in terms of infant mortality."),														
 													],
-													className="pink-item",style={"margin-top": "15%"}
-												),
-												html.Div(
-													[
-														html.H6(
-															"Residence area",
-															className="page-1h",
-														),
-														html.P("We found that indigenous, rom, and raizal people are more likely to have infant deaths than other races, while ‘None’ was found to have the lowest rate. This may suggest a heavy racial/cultural discrimination within the country or be a consequence of different habits among cultures."),
-													],
-													className="blue-item",style={"margin-top": "15%"}
+													className="pink-item",style={"margin-top": "20%"}
 												),
 												
 												
