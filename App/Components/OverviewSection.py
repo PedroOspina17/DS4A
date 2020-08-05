@@ -174,7 +174,7 @@ component = html.Div(
 														html.H4("Melissa Aguilar",className="page-1h font-weight-bold"),
 														html.Span("Ing. Física",className="d-block font-weight-bold"),
 														html.Span("melaguilarza@gmail.com",className="d-block"),
-														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
+														html.A("LinkedIn",href="www.linkedin.com/in/melissa-aguilar-z",className="linkedin d-block"),
 													],
 													className="pink-item columns eight",
 												),
@@ -259,7 +259,7 @@ component = html.Div(
 														html.H4("Jenny Lancheros",className="page-1h font-weight-bold"),
 														html.Span("Admistradora - Estadistica",className="d-block font-weight-bold"),
 														html.Span("jlanch14@hotmail.com",className="d-block"),
-														html.A("LinkedIn",href="www.linkedin.com/in/pedro-nel-ospina-graciano",className="linkedin d-block"),
+														html.A("LinkedIn",href="https://www.linkedin.com/in/andrescmb/",className="linkedin d-block"),
 													],
 													className="pink-item columns eight",
 												),
@@ -315,9 +315,8 @@ component = html.Div(
 										html.Div(
 											[
 												# dcc.Graph(figure=HorizontalBars.GeneralFig, id='OverviewGlobalBars',style={"height":"500px"}),
-												html.Img(src="assets/MortalityByContinent.png",style={"width": "91%","margin-left":"8%","margin-top":"5%"}),
-												html.Img(src="assets/LineLegends.png",style={"width": "35%","margin-left":"65%","margin-top":"8%"}),
-												html.Img(src="assets/LinesVsRegions.png",style={"width": "100%"}),
+												html.Img(src="assets/MAPA-01.jpg",style={"width": "84%","margin-left":"8%","margin-top":"5%"}),												
+												html.Img(src="assets/LinesVsRegions.png",style={"width": "95%"}),
 											],
 											className="six columns"
 										),
@@ -353,14 +352,13 @@ component = html.Div(
 														),
 														html.P("Every year, there are more baby boys than girls born around the world. But there are also more infant deaths of boys, with this last fact not completely explained by the difference in births."),
 													],
-													className="pink-item",style={"margin-top":"10%"}
+													className="pink-item",style={"margin-top":"40%"}
 												),	
 											], className="six columns"
 										),
 										html.Div(
 											[
-												html.Img(src="assets/MortalityBySex.png",style={"width": "100%"}),
-												
+												html.Img(src="assets/COCHE-01.jpg",style={"width": "100%"}),
 											],
 											className="six columns"
 										),
