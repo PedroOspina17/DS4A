@@ -337,7 +337,7 @@ component = html.Div(
             [
                 html.Div(
                     [
-                        getHeader("¡THANKS!"),
+                        getHeader("¡Special Thanks!"),
                         html.Div( # Color conclusions and graphs:  ToDo
                             [
                                 html.Div(
